@@ -3,3 +3,15 @@
 @import 'layout.css';
 @import 'module.css';
 @import 'reset.css';
+@import 'login.css';
+
+html {font-size: 1em;}
+
+body {
+    background-color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    color: darkgray;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
