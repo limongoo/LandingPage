@@ -102,4 +102,6 @@ const fonts = ['Roboto',
 'Shrikhand'
 ]
 
-let fontRandom = fonts[Math.floor(Math.random() * fonts.length)]
+$('fontButton').click(function(){
+  let fontRandom = fonts[Math.floor(Math.random() * fonts.length)]
+})

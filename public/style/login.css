@@ -1,0 +1,18 @@
+#newUserForm {
+  display: none;
+}
+
+/*Container for JoinButton and newUserForm*/
+#JoinButton {
+display: flex;
+position: relative;
+height: 150px;
+width: 150px;
+border-style: groove;
+}
+
+#existingUserContainer {
+  border: rgb(94, 94, 94);
+  padding-left: 775px;
+
+}
