@@ -1,3 +1,10 @@
 #newUserForm {
   display: none;
 }
+
+/*Container for JoinButton and newUserForm*/
+#newUserContainer {
+display: flex;
+position: relative;
+width: 550px;
+}

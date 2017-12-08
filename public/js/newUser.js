@@ -5,6 +5,7 @@ newUser.newUserContainer = function() {
   $('#JoinButton').on('click', function (event){
     event.preventDefault();
     $('#newUserForm').show();
+    $('#JoinButton').hide();
   })
 };
 
