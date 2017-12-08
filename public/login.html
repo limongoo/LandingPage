@@ -1,6 +1,6 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="login.css" />
   <title>Login</title>
   <link rel="stylesheet" href="style/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -10,22 +10,22 @@
 <body>
 
   <div class="newUserContainer">
-    <input type="button" type= "text" value="Join Now!">
+    <input type="button" id="JoinButton" type= "text" value="Join Now!">
     <!-- Need to put newUserForm into a button -->
-    <form name="newUserForm" id="">
+    <form name="newUserForm" id="newUserForm">
       <fieldset>
-        <input name="userInfo" id="firstName" type="text" placeholder="First Name"><br><br>
-        <input name="userInfo" id="lasttName" type="text" placeholder="Last Name"><br><br>
+        <input name="firstName" id="firstName" type="text" placeholder="First Name"><br><br>
+        <input name="LastName" id="LastName" type="text" placeholder="Last Name"><br><br>
         <input name="username" id="username" type="text" placeholder="Username"><br><br>
-        <input name="userInfo" id="email" type="text" placeholder="Your E-mail"><br><br>
-        <input name="userInfo" id="password" type="text" placeholder="Password"><br><br>
-        <input name="userInfo" id="confirmPassword" type="text" placeholder="Confirm Password"><br><br>
+        <input name="email" id="email" type="text" placeholder="Your E-mail"><br><br>
+        <input name="password" id="password" type="text" placeholder="Password"><br><br>
+        <input name="confirmPassword" id="confirmPassword" type="text" placeholder="Confirm Password"><br><br>
       </fieldset><br>
       <input type="submit" type= "text" value="Join Now!">
     </form>
   </div>
 
 
-
+  <script src="js/newUser.js"></script>
 </body>
 </html>
