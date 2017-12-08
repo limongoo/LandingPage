@@ -18,6 +18,8 @@ newUser.newUserContainer = function() {
 //   // while loop?
 // }
 
+
+
 $(document).ready(function(){
 newUser.newUserContainer();
 });

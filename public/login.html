@@ -1,6 +1,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="login.css" />
+  <link rel="stylesheet" type="text/css" href="base.css" />
   <title>Login</title>
   <link rel="stylesheet" href="style/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -25,6 +26,14 @@
     </form>
   </div>
 
+  <div id="existingUserContainer">
+    <form id="existingUser" name="existingUser">
+      <fieldset>
+        <input name="userName" id="userName" type="text" placeholder="User Name" maxlength="20"><br><br>
+        <input name="password" id="password" type="text" placeholder="Password" maxlength="20"><br><br>
+      </fieldset>
+      <input type="button" id="logInButton" value="Login">
+    </form>
 
   <script src="js/newUser.js"></script>
 </body>
