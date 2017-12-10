@@ -18,12 +18,11 @@
 }
 
 .modal-overlay {
-  background-color: grey;
-  bottom: 0;
-  height:100vh;
-  left: 100;
+  background-color: rgb(94, 94, 94);
+  opacity: 0.9;
+  left: 0;
+  height: 150vh;
   position: fixed;
-  right: 0;
   top: 0;
   width: 100%;
   visibility: hidden;
@@ -32,4 +31,15 @@
 
 .modal-overlay.is-visible {
   visibility: visible;
+}
+
+/*Form*/
+form {
+  width: 50%;
+  margin: 500;
+}
+
+form input[type="text"] {
+  font-size: 20px;
+
 }
