@@ -2,10 +2,10 @@ var newUser = {};
 
 // Function that hides new user form until "Join Now" button is clicked
 newUser.newUserContainer = function() {
-  $('#JoinButton').on('click', function (event){
+  $('#joinButton').on('click', function (event){
     event.preventDefault();
     $('#newUserForm').show();
-    $('#JoinButton').hide();
+    $('#joinButton').hide();
   })
 };
 
@@ -18,8 +18,17 @@ newUser.newUserContainer = function() {
 //   // while loop?
 // }
 
+// Modal window
+newUser.modalOverlay = function () {
+  $('#joinButton').on('click', function(event){
+    event.preventDefault();
+    $('.modal-overlay').addClass('is-visible');
+    $('.modal-overlay.is-visible').show();
+  })
+};
 
 
 $(document).ready(function(){
-newUser.newUserContainer();
+  newUser.newUserContainer();
+  newUser.modalOverlay();
 });

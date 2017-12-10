@@ -2,17 +2,34 @@
   display: none;
 }
 
-/*Container for JoinButton and newUserForm*/
-#JoinButton {
-display: flex;
-position: relative;
-height: 150px;
-width: 150px;
-border-style: groove;
+/*Container for joinButton and newUserForm*/
+#joinButton {
+  display: flex;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-style: groove;
 }
 
 #existingUserContainer {
   border: rgb(94, 94, 94);
   padding-left: 775px;
 
+}
+
+.modal-overlay {
+  background-color: grey;
+  bottom: 0;
+  height:100vh;
+  left: 100;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.modal-overlay.is-visible {
+  visibility: visible;
 }
