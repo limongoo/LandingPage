@@ -100,8 +100,10 @@ const fonts = ['Roboto',
 'Rajdhani',
 'Cinzel',
 'Shrikhand'
-]
+];
 
-$('fontButton').click(function(){
-  let fontRandom = fonts[Math.floor(Math.random() * fonts.length)]
+$('.randomFont').click(function(){
+  let fontRandom = fonts[Math.floor(Math.random() * fonts.length)];
+  console.log(fontRandom);
+  $('.fontStyleOutput').css('font-family', fontRandom);
 })
