@@ -9,3 +9,9 @@ $('.randomColor').click(function(){
   console.log(colorRandom);
   $('.fontStyleOutput, .fontColorOutput').css('color', colorRandom);
 });
+
+$('.randomColorOverlay').click(function(){
+  let colorRandom = '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+  console.log(colorRandom);
+  $('.randomImg').css('color', colorRandom);
+});

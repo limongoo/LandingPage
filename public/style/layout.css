@@ -22,6 +22,7 @@
   float:right;
   margin-top: 0;
   margin-right:0;
+  overflow:hidden;
 }
 
 .backgroundOutput {
@@ -32,7 +33,7 @@
   position:absolute;
   top:40%;
   left:50%;
-  text-align: center;
+  vertical-align: middle;
   z-index:1;
 }
 
@@ -40,10 +41,14 @@
   position:absolute;
   top:60%;
   left:50%;
-  text-align:center;
+  vertical-align: middle;
   z-index:1;
 }
 
+.randomImg {
+  background-size: cover;
+  max-width: 100%;
+}
 /*  -------- Media Queries ------- */
 
 /* Mobile */
