@@ -1,10 +1,48 @@
 .navigation ul li {
     list-style-type: none;
+    display: inline;
+    float:right;
+    padding: 3px;
 }
 
+.navigation ul li:hover {
+  background-color: #D0D0D0;
+}
 
+.randomController {
+  position: relative;
+  left:0px top:0px;
+  width:20%;
+  float:left;
+  padding:0;
+}
 
+.preview {
+  width: 80%;
+  float:right;
+  margin-top: 0;
+  margin-right:0;
+}
 
+.backgroundOutput {
+  position:relative;
+}
+
+#h1Preview {
+  position:absolute;
+  top:40%;
+  left:50%;
+  text-align: center;
+  z-index:1;
+}
+
+#paraPreview {
+  position:absolute;
+  top:60%;
+  left:50%;
+  text-align:center;
+  z-index:1;
+}
 
 /*  -------- Media Queries ------- */
 
@@ -15,7 +53,7 @@
 
 /* Tablet */
 @media only screen and (max-width: 1280px) and (min-width: 653px) {
-   
+
 }
 
 /* Desktop */
