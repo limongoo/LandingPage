@@ -23,6 +23,7 @@
   margin-top: 0;
   margin-right:0;
   overflow:hidden;
+  text-align: center;
 }
 
 .backgroundOutput {
@@ -32,22 +33,25 @@
 #h1Preview {
   position:absolute;
   top:40%;
-  left:50%;
-  vertical-align: middle;
+  margin:0 auto;
+  width: 80%;
   z-index:1;
 }
 
 #paraPreview {
   position:absolute;
   top:60%;
-  left:50%;
+  /*left:50%;*/
+  margin:0 auto;
+  text-align:center;
   vertical-align: middle;
   z-index:1;
 }
 
 .randomImg {
-  background-size: cover;
-  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: calc(100vh - 42px);
 }
 
 /*  -------- Media Queries ------- */
