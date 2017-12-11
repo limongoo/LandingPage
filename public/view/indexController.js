@@ -22,7 +22,8 @@ $('.lockStyle').on('click', function(event){
   event.preventDefault();
   $('.randomFont').hide();
 
-$('.lockStyle').on('click', function(event){
-  event.preventDefault();
-  $('.randomFont').show();
+  $('.lockStyle').on('click', function(event){
+    event.preventDefault();
+    $('.randomFont').show();
+  });
 });
