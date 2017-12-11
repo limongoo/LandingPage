@@ -25,6 +25,5 @@ $('.lockStyle').on('click', function(event){
     $('.randomFont').show();
   } else {
     $('.randomFont').hide();
-
   }
 });
