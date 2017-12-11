@@ -20,9 +20,11 @@ $('.randomColorOverlay').click(function(){
 // Function to hide refresh icon if user clicks lock icon
 $('.lockStyle').on('click', function(event){
   event.preventDefault();
-  $('.randomFont').hide();
+  console.log($('.randomFont').css('display')==='none');
+  if ($('.randomFont').css('display')==='none') {
+    $('.randomFont').show();
+  } else {
+    $('.randomFont').hide();
 
-$('.lockStyle').on('click', function(event){
-  event.preventDefault();
-  $('.randomFont').show();
+  }
 });
