@@ -16,7 +16,10 @@
   float:left;
   padding:0;
 }
-
+header, .randomController {
+  background-color: whitesmoke;
+  height: 100%;
+}
 .preview {
   width: 80%;
   float:right;
@@ -41,7 +44,6 @@
 #paraPreview {
   position:absolute;
   top:60%;
-  /*left:50%;*/
   margin:0 auto;
   text-align:center;
   vertical-align: middle;
