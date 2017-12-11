@@ -27,8 +27,43 @@ newUser.modalOverlay = function () {
   })
 };
 
+// Form Submit
+$('#newUserForm').submit(function(event){
+  event.preventDefault();
+  const captureUser  = {
+    first_name: $('#firstName').val(),
+    last_name: $('#lastName').val(),
+    username: $('#username').val(),
+    password: $('#password').val()
+  }
+  $.post('/signup', captureUser)
+  .done(function(response){
+    console.log(response);
+    if(response === 'Insert Complete') {
+      window.location.replace('/account.html');
+    }
+  })
+});
+
+// Login Submit
+$('#existingUser').submit(function(event){
+  event.preventDefault();
+  const loginUser  = {
+    username: $('#userName').val(),
+    password: $('#password').val()
+  }
+  $.post('/login', loginUser)
+  .done(function(response){
+    console.log(response);
+    if(response === 'Verified') {
+      window.location.replace('/account.html');
+    }
+  })
+});
 
 $(document).ready(function(){
   newUser.newUserContainer();
   newUser.modalOverlay();
 });
+
+
