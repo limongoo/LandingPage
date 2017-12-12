@@ -11,13 +11,15 @@
 
 .randomController {
   position: fixed;
-  left:0px top:0px;
+  left:0px;
+  top:0px;
   width:10%;
   float:left;
   padding:0;
   z-index: 103;
   opacity: 70%;
 }
+
 
 .randomController {
   background-color: rgba(255,255,255,.2);
