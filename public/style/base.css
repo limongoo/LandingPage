@@ -3,6 +3,7 @@
 @import 'module.css';
 @import 'reset.css';
 @import 'login.css';
+@import 'copyCode.css';
 
 header {width:100%;}
 
