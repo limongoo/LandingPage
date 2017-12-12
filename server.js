@@ -57,6 +57,48 @@ app.post('/login', function(request, response) {
   });
 });
 
+// INSERT STYLES RECORD
+app.post('/account', function(request, response) {
+  client.query(
+    `INSERT INTO styles (styles_id, font, font_color, background_image, color_overlay, gradient_overlay)
+    VALUES ($1, $2, $3, $4, $5, $6) ON CONFLICT DO NOTHING;`,
+    [request.body.styles_id,
+    request.body.font,
+    request.body.font_color,
+    request.body.background_image,
+    request.body.color_overlay,
+    request.body.gradient_overlay]
+  )
+  .then(function() {
+    response.send('Insert Complete')
+  })
+  .catch(function(err) {
+    console.error(err)
+  });
+});
+
+// Get styles data from record
+app.post('/account', function(request, response) {
+  client.query(
+    `SELECT * FROM users 
+    WHERE font = $1 AND font_color = $2 AND background_image = $3 AND color_overlay = $4 AND gradient_overlay = $5`,
+    [request.body.font,
+    request.body.font_color,
+    request.body.background_image,
+    request.body.color_overlay,
+    request.body.gradient_overlay]
+  )
+  .then(function() {
+    response.send('Verified')
+  })
+  .catch(function(err) {
+    console.error(err)
+  });
+});
+
+
+
+
 // CREATE TABLES
 function loadDB() {
   client.query(`

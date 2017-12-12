@@ -15,3 +15,21 @@ $('#randomBackground').on('click', function() {
         });
     // }
 });
+
+
+// $('#randomBackground').on('click', function getRandom() {});
+
+function getRandom() {
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.unsplash.com/photos/random',
+        headers: {'Authorization':`Client-ID ${token}`}
+    }).done(function(results) {
+        $('.randomImg').attr('src', results.urls.regular);
+    });
+};
+
+$(document).ready(function(){
+    getRandom();
+});
+  
