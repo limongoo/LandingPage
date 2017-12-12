@@ -14,4 +14,4 @@ $('.backgroundRandom').on('click', function() {
             $('.randomImg').attr('src', results.urls.regular);
         });
     // }
-    });
+});

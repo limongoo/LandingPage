@@ -15,7 +15,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-
 app.get('/', function(request, response) {
   response.sendFile('./public/index.html');
 });
@@ -24,9 +23,7 @@ app.listen(PORT, function() {
   console.log(`Listening on port:${PORT}`);
 });
 
-
 // INSERT RECORD
-
 app.post('/signup', function(request, response) {
   client.query(
     `INSERT INTO users (first_name, last_name, username, password)
@@ -44,6 +41,7 @@ app.post('/signup', function(request, response) {
   });
 });
 
+// Check password in record
 app.post('/login', function(request, response) {
   client.query(
     `SELECT * FROM users 
@@ -59,11 +57,7 @@ app.post('/login', function(request, response) {
   });
 });
 
-
-
-
 // CREATE TABLES
-
 function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
@@ -87,5 +81,4 @@ function loadDB() {
     );`
   );
 }
-
 loadDB();
