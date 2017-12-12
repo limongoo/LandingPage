@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Nunito|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Patua+One|Play|Playfair+Display|Poiret+One|Poppins|Prociono|Questrial|Quicksand|Rajdhani|Ranchers|Roboto|Roboto+Condensed|Roboto+Mono|Rokkitt|Rubik|Shadows+Into+Light|Shrikhand|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro|Spectral+SC|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Vollkorn+SC|Work+Sans|Yanone+Kaffeesatz" rel="stylesheet">
 </head>
 <body>
-  <div class="shadowGenerator">
     <header>reFRESH</header>
     <nav class="navigation">
       <ul>
@@ -22,8 +21,16 @@
         <li> discover </li>
       </ul>
     </nav>
-  </div>
   <div class="randomController">
+  <nav class="navigation">
+    <ul>
+      <li> about </li>
+      <li><a href="login.html">account</a></li>
+      <li> discover </li>
+    </ul>
+  </nav>
+  <div class="randomController">
+    <div>reFRESH</div>
     <!-- Controls -->
     <div class="fontStyle">
       <h4>Font Style</h4>
@@ -61,6 +68,7 @@
           <div id="googleFontCC"></div>
         </div>
       </div>
+      <div><img src="img/copy.svg"></div>
     </div>
   </div>
   <div class="preview">
@@ -74,6 +82,11 @@
     </p>
     <div class="overlayOutput">
       <div class="backgroundOutput"><img class="randomImg"></div>
+      <div class="backgroundOutput">
+        <img class="randomImg">
+        <div class="colorOverlayOutput"></div>
+        <div class="gradientOverlayOutput"></div>
+      </div>
     </div>
   </div>
   <script type="text/javascript" src="data/fonts.js"></script>
@@ -81,6 +94,5 @@
   <script type="text/javascript" src="js/unsplash.js"></script>
   <script type="text/javascript" src="view/indexController.js"></script>
   <script type="text/javascript" src="js/copyCode.js"></script>
-
 </body>
 </html>
