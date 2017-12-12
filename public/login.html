@@ -23,8 +23,10 @@
     <div class="fullContainer flex">
         <div class="flex2">
             <div class="backgroundLogin">
-                <div id="newUserContainer">
-                    <input type="button" id="joinButton" value="Join Now!">
+                
+                    <!-- <input type="button" id="joinButton" value="Create New Account!"> -->
+                    <h3 class="createTitle">Create your free account!</h3>
+                    <div id="joinButton">Create Account!</div>
                     <div class="modal-overlay">
                         <form name="newUserForm" id="newUserForm">
                             <fieldset>
@@ -37,17 +39,16 @@
                             <input type="submit" value="Join Now!">
                         </form>
                     </div>
-                </div>
+                
             </div>
         </div>
 
         <div class="flex2">
             <div id="existingUserContainer">
-                <form id="existingUser" name="existingUser">
-                    <fieldset>
-                        <input name="userName" id="userName" type="text" placeholder="User Name" maxlength="20"><br><br>
-                        <input name="password" id="password" type="text" placeholder="Password" maxlength="20"><br><br>
-                    </fieldset>
+                <h3>Welcome back, please log in!</h3>
+                <form id="existingUser">
+                    <input name="userName" id="userName" type="text" placeholder="User Name" maxlength="20"><br><br>
+                    <input name="password" id="password" type="text" placeholder="Password" maxlength="20"><br><br>
                     <input type="submit" value="Login">
                 </form>
             </div>

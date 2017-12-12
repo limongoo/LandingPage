@@ -4,12 +4,14 @@
   padding: 0;
   overflow: hidden;
   clear: both;
+  height: 100vh;
 }
 
 .flex {
   display: flex;
   direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .flex2 {
@@ -25,8 +27,10 @@
 .backgroundLogin {
   background-image: url('https://source.unsplash.com/random');
   background-size: cover;
-
+  height: 100vh;
+  transition: 0.3s ease all;
 }
+
 
 #newUserForm {
   display: none;
@@ -34,15 +38,30 @@
 
 /*Container for joinButton and newUserForm*/
 #joinButton {
-  display: flex;
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-style: groove;
+  position: absolute;
+  padding: 20px 30px;
+  border: none;
+  text-align: center;
+  left: 15%;
+  top: 50%;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  transition: 0.3s ease all;
+  max-width: 50%;
+}
+
+#joinButton:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.createTitle {
+  text-align: center;
+  color: white;
 }
 
 #existingUserContainer {
-  border: rgb(94, 94, 94);
+  text-align: center;
 
 }
 
@@ -65,11 +84,10 @@
 
 /*Form*/
 form {
-  width: 50%;
-  margin: 500;
 }
 
 form input[type="text"] {
-  font-size: 20px;
+  font-size: 16px;
+  padding: 10px 15px;
 
 }
