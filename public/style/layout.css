@@ -1,8 +1,8 @@
 .navigation ul li {
-    list-style-type: none;
-    display: inline;
-    float:right;
-    padding: 3px;
+  list-style-type: none;
+  display: inline;
+  float:right;
+  padding: 3px;
 }
 
 .navigation ul li:hover {
@@ -20,14 +20,16 @@
   opacity: 70%;
 }
 
-header, .randomController {
-  background-color: rgba(255,255,255,.2);
+
+.randomController {
+  background-color: rgba(255,255,255,.1);
   height: 100%;
 }
 
 .randomController h4 {
   font-size: 14px;
   color: black;
+  font-weight:bold;
 }
 
 .preview {
@@ -68,10 +70,20 @@ header, .randomController {
   height: calc(100vh - 42px);
 }
 
-.shadowGenerator {
-  -webkit-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
--moz-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
+.colorOverlayOutput {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.gradientOverlayOutput {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 }
 /*  -------- Media Queries ------- */
 
