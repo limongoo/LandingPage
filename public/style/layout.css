@@ -10,18 +10,26 @@
 }
 
 .randomController {
-  position: relative;
+  position: fixed;
   left:0px top:0px;
-  width:20%;
+  width:10%;
   float:left;
   padding:0;
+  z-index: 103;
+  opacity: 70%;
 }
 header, .randomController {
-  background-color: whitesmoke;
+  background-color: rgba(255,255,255,.2);
   height: 100%;
 }
+
+.randomController h4 {
+  font-size: 14px;
+  color: black;
+}
+
 .preview {
-  width: 80%;
+  width: 100%;
   float:right;
   margin-top: 0;
   margin-right:0;
@@ -37,7 +45,7 @@ header, .randomController {
   position:absolute;
   top:40%;
   margin:0 auto;
-  width: 80%;
+  width: 100%;
   z-index:1;
 }
 
@@ -48,6 +56,8 @@ header, .randomController {
   text-align:center;
   vertical-align: middle;
   z-index:1;
+  width: 50%;
+  left: 25%;
 }
 
 .randomImg {
@@ -56,6 +66,11 @@ header, .randomController {
   height: calc(100vh - 42px);
 }
 
+.shadowGenerator {
+  -webkit-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
+-moz-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
+box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
+}
 /*  -------- Media Queries ------- */
 
 /* Mobile */

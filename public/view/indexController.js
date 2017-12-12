@@ -1,3 +1,4 @@
+// Randomization functionalities for the controller
 $('.randomFont').click(function(){
   let fontRandom = fonts[Math.floor(Math.random() * fonts.length)];
   console.log(fontRandom);
