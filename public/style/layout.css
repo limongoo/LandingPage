@@ -71,6 +71,13 @@
   height: calc(100vh - 42px);
 }
 
+.colorOverlayOutput {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
 .shadowGenerator {
   -webkit-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);
 -moz-box-shadow: 10px 10px 61px 0px rgba(0,0,0,0.4);

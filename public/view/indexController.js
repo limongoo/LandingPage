@@ -12,10 +12,13 @@ $('#randomColor').click(function(){
 });
 
 $('#randomColorOverlay').click(function(){
-  let colorRandom = '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
-  console.log(colorRandom);
-  $('.backgroundOutput', '.randomImg').css('background-color', colorRandom);
-
+  function random_rgba() {
+      var o = Math.round, r = Math.random, s = 255;
+      return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+  }
+  let overlayRandom = random_rgba();
+  $('.colorOverlayOutput').css('background', overlayRandom);
+  console.log(overlayRandom);
 });
 
 // Function to hide refresh icon if user clicks lock icon
