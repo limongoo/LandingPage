@@ -11,11 +11,21 @@ newUser.newUserContainer = function() {
 };
 
 // Modal window
-newUser.modalOverlay = function () {
+newUser.modalOverlay = function() {
   $('#joinButton').on('click', function(event){
     event.preventDefault();
     $('.modal-overlay').addClass('is-visible');
     $('.modal-overlay.is-visible').show();
+    $('#joinButton').show();
+  })
+};
+
+newUser.modalClose = function() {
+  $('.close').on('click', function(event){
+    event.preventDefault();
+    $('.modal-overlay').removeClass('is-visible');
+    $('.modal-overlay.is-visible').hide();
+    $('#joinButton').show();
   })
 };
 
@@ -56,8 +66,8 @@ $('#existingUser').submit(function(event){
 
 newUser.validatePassword = function() {
   $('#submitNewUser').click(function() {
-    var password = $('#password'.val());
-    var confirmPassword = $('#confirmPassword')
+    var password = $('#password').val();
+    var confirmPassword = $('#confirmPassword').val();
     if (password != confirmPassword) {
       alert("Passwords do not match. Please try again.");
       return false;
@@ -68,6 +78,8 @@ newUser.validatePassword = function() {
 
 $(document).ready(function(){
   newUser.newUserContainer();
+  newUser.modalClose();
   newUser.modalOverlay();
-  // newUser.validatePassword();
+  newUser.validatePassword();
+  
 });
