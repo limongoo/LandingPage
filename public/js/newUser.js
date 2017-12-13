@@ -53,7 +53,8 @@ $('#existingUser').submit(function(event){
   })
 });
 
-newUser.validataPassword = function() {
+
+newUser.validatePassword = function() {
   $('#submitNewUser').click(function() {
     var password = $('#password'.val());
     var confirmPassword = $('#confirmPassword')

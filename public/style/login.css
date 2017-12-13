@@ -16,12 +16,12 @@
 
 .flex2 {
   flex: 1;
-  padding: 0 1% 0 0;
+  padding: 0;
 }
 
 .flex4 {
   flex: 1 0 24%;
-  padding: 0 1% 0 0;
+  padding: 0;
 }
 
 .backgroundLogin {
@@ -29,6 +29,9 @@
   background-size: cover;
   height: 100vh;
   transition: 0.3s ease all;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 
@@ -38,17 +41,18 @@
 
 /*Container for joinButton and newUserForm*/
 #joinButton {
-  position: absolute;
+  /* position: absolute; */
   padding: 20px 30px;
   border: none;
   text-align: center;
-  left: 15%;
-  top: 50%;
+  /* left: 15%;
+  top: 50%; */
   font-size: 20px;
   background-color: rgba(0,0,0,0.6);
   color: white;
   transition: 0.3s ease all;
   max-width: 50%;
+  margin: 0 auto;
 }
 
 #joinButton:hover {
@@ -58,11 +62,25 @@
 .createTitle {
   text-align: center;
   color: white;
+  /* top: 34%;
+  position: absolute;
+  left: 8%; */
+}
+
+#loginContainer {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #existingUserContainer {
   text-align: center;
-
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Modal Overlay */
@@ -84,10 +102,14 @@
 
 /*Form*/
 form {
+  text-align: center;
 }
 
 form input[type="text"] {
   font-size: 16px;
   padding: 10px 15px;
+}
 
+form input[type="submit"] {
+  padding: 10px 15px;
 }
