@@ -10,6 +10,14 @@ modal.copyCodeModal = function () {
   })
 };
 
+modal.hideModalOverlay = function () {
+  $('#clear').on('click', function(event) {
+    event.preventDefault();
+    $('.modal').hide();
+    $('#clear').hide();
+  })
+};
+
 modal.displayCC = function () {
   //font style//
   const font = $('.fontStyleOutput').css('font-family');
@@ -45,4 +53,5 @@ modal.displayCC = function () {
 
 $(document).ready(function(){
   modal.copyCodeModal();
+  modal.hideModalOverlay();
 });
