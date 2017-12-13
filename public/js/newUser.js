@@ -53,17 +53,17 @@ $('#existingUser').submit(function(event){
   })
 });
 
-// newUser.validataPassword = function() {
-//   $('#submitNewUser').click(function() {
-//     var password = $('#password'.val());
-//     var confirmPassword = $('#confirmPassword')
-//     if (password != confirmPassword) {
-//       alert("Passwords do not match. Please try again.");
-//       return false;
-//     }
-//     return true;
-//   });
-// };
+newUser.validataPassword = function() {
+  $('#submitNewUser').click(function() {
+    var password = $('#password'.val());
+    var confirmPassword = $('#confirmPassword')
+    if (password != confirmPassword) {
+      alert("Passwords do not match. Please try again.");
+      return false;
+    }
+    return true;
+  });
+};
 
 $(document).ready(function(){
   newUser.newUserContainer();
