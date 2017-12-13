@@ -5,7 +5,10 @@
 @import 'login.css';
 @import 'copyCode.css';
 
-header {width:100%;}
+header {
+  width:100%;
+  margin-top: 1.5em;
+}
 
 html {font-size: 1em;}
 
@@ -45,6 +48,8 @@ small, .font_small {font-size: 0.707em;}
 
 a {
     text-decoration: none;
+    color: white;
+    padding: 15px;
 }
 
 /* a:hover {
