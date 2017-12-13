@@ -1,32 +1,33 @@
+/* ------ Navigation Bar CSS ------ */
 .navigation ul li {
   list-style-type: none;
   display: inline;
   float: right;
   padding: 3px;
+  color: white;
 }
 
 .navigation ul li:hover {
-  background-color: #D0D0D0;
+  background-color: rgba(255,255,255,.3);
 }
 
 .navigation {
   position: absolute;
   right: 1em;
   z-index: 1;
+  margin-top: 1.5em;
 }
+
+/* ------ Randomization Controller CSS ------ */
 .randomController {
   position: fixed;
   left:0px;
   top:0px;
-  width:10%;
+  width:11%;
   float:left;
-  padding: 0 0 0 5px;
+  padding: 0 0 0 10px;
   z-index: 103;
   opacity: 70%;
-}
-
-
-.randomController {
   background-color: rgba(255,255,255,.3);
   height: 100%;
 }
@@ -35,8 +36,18 @@
   font-size: 14px;
   color: black;
   font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.iconFlex {
+  display: flex;
+  direction: row;
+}
+
+.lock {
+  padding-right: 20px;
+}
+/* ------ Image Preview CSS ------ */
 .preview {
   width: 100%;
   float:right;
@@ -52,7 +63,7 @@
 
 #h1Preview {
   position:absolute;
-  top:40%;
+  top:30%;
   margin:0 auto;
   width: 100%;
   z-index:1;
@@ -60,7 +71,7 @@
 
 #paraPreview {
   position:absolute;
-  top:60%;
+  top:50%;
   margin:0 auto;
   text-align:center;
   vertical-align: middle;
@@ -76,6 +87,7 @@
   display: flex;
 }
 
+/*  ------ Color/Gradient Overlay CSS ------ */
 .colorOverlayOutput {
   position:absolute;
   top:0;
@@ -91,6 +103,7 @@
   left:0;
   right:0;
 }
+
 /*  -------- Media Queries ------- */
 
 /* Mobile */
