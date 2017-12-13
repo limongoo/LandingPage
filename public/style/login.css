@@ -75,7 +75,9 @@
 
 #existingUserContainer {
   text-align: center;
-  background-color: whitesmoke;
+  background-image: url('../img/lines1.jpg');
+  background-size: cover;
+  /* background-color: whitesmoke; */
   height: 100vh;
   display: flex;
   justify-content: center;
