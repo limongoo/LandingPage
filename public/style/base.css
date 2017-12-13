@@ -47,10 +47,10 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
     border-bottom: 2px solid black;
     padding-bottom: 5px;
-}
+} */
 
 .hide {
     display: none;
