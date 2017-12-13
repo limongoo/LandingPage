@@ -7,6 +7,8 @@ modal.copyCodeModal = function () {
     $('.modal').addClass('is-visible');
     $('.modal.is-visible').show();
     modal.displayCC();
+    modal.hideModalOverlay();
+    $('#clear').show();
   })
 };
 
@@ -53,5 +55,5 @@ modal.displayCC = function () {
 
 $(document).ready(function(){
   modal.copyCodeModal();
-  modal.hideModalOverlay();
+  // modal.hideModalOverlay();
 });

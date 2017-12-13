@@ -17,3 +17,14 @@
 .modal.is-visible {
   visibility: visible;
 }
+
+/* #clear {
+  visibility: hidden;
+  float:right;
+  margin-top: .4em;
+  margin-right: .5em;
+} */
+
+/* #clear {
+  visibility: visible;
+} */
