@@ -5,6 +5,7 @@ $('#randomFont').click(function(){
   let fontRandom = fonts[Math.floor(Math.random() * fonts.length)];
   console.log(fontRandom);
   $('.fontStyleOutput').css('font-family', fontRandom);
+  modal.displayCC();
 });
 
 //Random Color
@@ -12,6 +13,7 @@ $('#randomColor').click(function(){
   let colorRandom = '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
   console.log(colorRandom);
   $('.fontStyleOutput, .fontColorOutput').css('color', colorRandom);
+  modal.displayCC();
 });
 
 //Random RBGA Function for Color/Gradient Overlay usage
@@ -25,6 +27,7 @@ $('#randomColorOverlay').click(function(){
   let overlayRandom = random_rgba();
   $('.colorOverlayOutput').css('background', overlayRandom);
   console.log(overlayRandom);
+  modal.displayCC();
 });
 
 //Random Gradient Overlay
@@ -34,6 +37,7 @@ $('#randomGradientOverlay').click(function(){
   $('.gradientOverlayOutput').css('background-image', `linear-gradient(${colorRandom},${colorRandom2})`);
   console.log(colorRandom);
   console.log(colorRandom2);
+  modal.displayCC();
 });
 
 //Master Random Generator
@@ -57,6 +61,7 @@ $('#randomizer').click(function(){
   console.log(gradientRandom2);
   //random image function
   getRandom();
+  modal.displayCC();
 });
 
 // Function to hide refresh icon if user clicks lock icon
