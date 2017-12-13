@@ -5,7 +5,7 @@ $('#randomFont').click(function(){
   let fontRandom = fonts[Math.floor(Math.random() * fonts.length)];
   console.log(fontRandom);
   $('.fontStyleOutput').css('font-family', fontRandom);
-})
+});
 
 //Random Color
 $('#randomColor').click(function(){
@@ -22,7 +22,6 @@ function random_rgba() {
 
 //Random Color Overlay
 $('#randomColorOverlay').click(function(){
-  
   let overlayRandom = random_rgba();
   $('.colorOverlayOutput').css('background', overlayRandom);
   console.log(overlayRandom);
@@ -35,7 +34,31 @@ $('#randomGradientOverlay').click(function(){
   $('.gradientOverlayOutput').css('background-image', `linear-gradient(${colorRandom},${colorRandom2})`);
   console.log(colorRandom);
   console.log(colorRandom2);
-})
+});
+
+//Master Random Generator
+$('#randomizer').click(function(){
+  //random font
+  let fontRandom = fonts[Math.floor(Math.random() * fonts.length)];
+  console.log(fontRandom);
+  $('.fontStyleOutput').css('font-family', fontRandom);
+  //random font color
+  let colorRandom = '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+  console.log(colorRandom);
+  $('.fontStyleOutput, .fontColorOutput').css('color', colorRandom);
+  //random color overlay
+  let overlayRandom = random_rgba();
+  $('.colorOverlayOutput').css('background', overlayRandom);
+  console.log(overlayRandom);
+  let gradientRandom = random_rgba();
+  let gradientRandom2 = random_rgba();
+  $('.gradientOverlayOutput').css('background-image', `linear-gradient(${gradientRandom},${gradientRandom2})`);
+  console.log(gradientRandom);
+  console.log(gradientRandom2);
+  //random image function
+  getRandom();
+});
+
 // Function to hide refresh icon if user clicks lock icon
 $('.lock').on('click', function(event){
   event.preventDefault();

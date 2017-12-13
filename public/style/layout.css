@@ -1,7 +1,7 @@
 .navigation ul li {
   list-style-type: none;
   display: inline;
-  float:right;
+  float: right;
   padding: 3px;
 }
 
@@ -9,6 +9,11 @@
   background-color: #D0D0D0;
 }
 
+.navigation {
+  position: absolute;
+  right: 1em;
+  z-index: 1;
+}
 .randomController {
   position: fixed;
   left:0px;
@@ -22,7 +27,7 @@
 
 
 .randomController {
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255,255,255,.3);
   height: 100%;
 }
 
@@ -67,7 +72,8 @@
 .randomImg {
   object-fit: cover;
   width: 100%;
-  height: calc(100vh - 42px);
+  height: calc(100vh);
+  display: flex;
 }
 
 .colorOverlayOutput {
