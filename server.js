@@ -78,7 +78,7 @@ app.post('/account', function(request, response) {
 });
 
 // Get styles data from record
-app.post('/account', function(request, response) {
+app.get('/account', function(request, response) {
   client.query(
     `SELECT * FROM users 
     WHERE font = $1 AND font_color = $2 AND background_image = $3 AND color_overlay = $4 AND gradient_overlay = $5`,
@@ -89,7 +89,7 @@ app.post('/account', function(request, response) {
     request.body.gradient_overlay]
   )
   .then(function() {
-    response.send('Verified')
+    response.send('Data Received')
   })
   .catch(function(err) {
     console.error(err)

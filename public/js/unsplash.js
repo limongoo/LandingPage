@@ -12,6 +12,8 @@ $('#randomBackground').on('click', function() {
             headers: {'Authorization':`Client-ID ${token}`}
         }).done(function(results) {
             $('.randomImg').attr('src', results.urls.regular);
+            // $('.credit').text('Photo by: ' + results.users.username);
+            // console.log(results.users.username);
         });
     // }
 });

@@ -20,6 +20,7 @@ newUser.modalOverlay = function() {
   })
 };
 
+// Modal close
 newUser.modalClose = function() {
   $('.close').on('click', function(event){
     event.preventDefault();
@@ -63,7 +64,7 @@ $('#existingUser').submit(function(event){
   })
 });
 
-
+// Password validator
 newUser.validatePassword = function() {
   $('#submitNewUser').click(function() {
     var password = $('#password').val();
@@ -81,5 +82,4 @@ $(document).ready(function(){
   newUser.modalClose();
   newUser.modalOverlay();
   newUser.validatePassword();
-  
 });
