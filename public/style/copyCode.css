@@ -19,18 +19,21 @@
   transform: translate(-50%, -50%);
 }
 
+.modal {
+  position:fixed;
+}
+
 #googleFontCC {
-  margin: 50% auto;
 }
 
 .modal.is-visible {
   visibility: visible;
 }
 
-#clear {
+#clear-white {
   display: none;
-  /* float: right; */
-  /* height: -50vh; */
+  float: right;
+  height: 4vh;
   /* max-height: calc(100% - 100px);
   top: 50%;
   transform: translate(-50%, -50%); */

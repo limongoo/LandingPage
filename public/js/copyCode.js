@@ -8,17 +8,17 @@ modal.copyCodeModal = function () {
     $('.modal').addClass('is-visible');
     $('.modal.is-visible').show();
     modal.displayCC();
-    $('#clear').show();
+    $('#clear-white').show();
   })
 };
 
 modal.hideModalOverlay = function () {
-  $('#clear').on('click', function(event) {
+  $('#clear-white').on('click', function(event) {
     event.preventDefault();
     $('.modal').removeClass('is-visible');
     // $('.modal').hide();
     console.log('anything');
-    // $('#clear').hide();
+    // $('#clear-white').hide();
   })
 };
 
@@ -48,10 +48,11 @@ modal.displayCC = function () {
   $('#googleFontCC').show().html(message);
 };
 
-function copyToClipboard(element) {
-  var $copyCodeButton = $("<input>");
+function copyToClipboard() {
+  var $temp = $("<input>");
+  console.log("Hi there");
   $(".modal").append($temp);
-  $temp.val($(element).text()).select();
+  $temp.val($("#googleFontCC").text()).select();
   document.execCommand("copy");
   $temp.remove();
 }
@@ -66,4 +67,5 @@ function copyToClipboard(element) {
 $(document).ready(function(){
   modal.copyCodeModal();
   modal.hideModalOverlay();
+  $('#copyButton').on('click',copyToClipboard);
 });
