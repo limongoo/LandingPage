@@ -1,9 +1,9 @@
-/* Account css */
 
+/* Favorite Button */
 .favorite {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 1.5em;
+    right: 1.5em;
     z-index: 10;
     transition: 0.3s ease all;
 }
@@ -13,6 +13,28 @@
 }
 
 
+/* Account css */
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 100px 0;
+}
+
+.rowTitle {
+    font-size: 1.375em;
+    text-transform: uppercase;
+    letter-spacing: .05em; 
+}
+
+.row {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
 
 /*  -------- Media Queries ------- */
 

@@ -19,14 +19,33 @@
             </ul>
         </nav>
 
-       
-        <h2>Hi!</h2>
+        <div class="fullContainer center">
+            <h1 class="title">Hi.</h1>
+            <div id="favoritesOutput"></div>
+        </div>
+        
         
 
-        <div id="favoritesOutput"></div>
+        
 
-
-
+    <script id="favorite-template" type="text/x-handlebars-template">
+        <ul>
+            <li class="row rowTitle">
+                <div>Font</div>
+                <div>Font Color</div>
+                <div>Background Image</div>
+                <div>Color Overlay</div>
+                <div>Gradient Overlay</div>
+            </li>
+            <li class="row">
+                <div>{{font}}</div>
+                <div>{{font_color}}</div>
+                <div>{{background_image}}</div>
+                <div>{{color)overlay}}</div>
+                <div>{{gradient)overlay}}</div>
+            </li>
+        </ul>
+    </script>
     <script type="text/javascript" src="js/token.js"></script>
     <script type="text/javascript" src="js/copyCode.js"></script>
     <script type="text/javascript" src="js/account.js"></script>
