@@ -13,6 +13,7 @@ $('.favorite').on('click', function(event){
         color_overlay: $('.colorOverlayOutput').css('background'),
         gradient_overlay: $('.gradientOverlayOutput').css('background-image')
     }
+    console.log(captureStyles);
     $.post('/account', captureStyles)
     .done(function(response){
       if(response === 'Insert Complete') {
