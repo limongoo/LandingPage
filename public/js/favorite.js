@@ -22,10 +22,3 @@ $('.favorite').on('click', function(event){
       }
     });
 });
-
-// Compile Handlebars
-favorites.toHtml = function() {
-    // Project Grid
-    var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
-    return projectFiller(this); // return compiled templates back to html
-};
