@@ -13,51 +13,52 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Nunito|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Patua+One|Play|Playfair+Display|Poiret+One|Poppins|Prociono|Questrial|Quicksand|Rajdhani|Ranchers|Roboto|Roboto+Condensed|Roboto+Mono|Rokkitt|Rubik|Shadows+Into+Light|Shrikhand|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro|Spectral+SC|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Vollkorn+SC|Work+Sans|Yanone+Kaffeesatz" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation">
-      <ul>
-        <li><a href="about.html">info</a></li>
-        <li><a href="login.html">account</a></li>
-      </ul>
-    </nav>
+  <nav class="navigation">
+    <ul>
+      <li><a href="about.html">info</a></li>
+      <li><a href="login.html">account</a></li>
+    </ul>
+  </nav>
 
   <div class="randomController">
-    <div><img id="clear" src="img/clear.svg"></div>
+    <!-- <div><img id="clear" src="img/clear.svg"></div> -->
+
     <header><a href="index.html">reFRESH</a></header>
     <!-- Controls -->
     <div class="fontStyle">
       <h4>Font Style</h4>
       <div class="iconFlex">
-      <div><img class= "lock" data-icon="randomFont" src="img/lock.svg"></div>
-      <div><img id="randomFont" src="img/randomize.svg"></div>
-    </div>
+        <div><img class= "lock" data-icon="randomFont" src="img/lock.svg"></div>
+        <div><img id="randomFont" src="img/randomize.svg"></div>
+      </div>
     </div>
     <div class="fontColor">
       <h4>Font Color</h4>
       <div class="iconFlex">
-      <div><img class="lock" data-icon="randomColor" src="img/lock.svg"></div>
-      <div><img id="randomColor" src="img/randomize.svg"></div>
-    </div>
+        <div><img class="lock" data-icon="randomColor" src="img/lock.svg"></div>
+        <div><img id="randomColor" src="img/randomize.svg"></div>
+      </div>
     </div>
     <div class="backgroundPhoto">
       <h4>Background Photo</h4>
       <div class="iconFlex">
-      <div><img class="lock" data-icon="randomBackground" src="img/lock.svg"></div>
-      <div><img id="randomBackground" src="img/randomize.svg"></div>
-    </div>
+        <div><img class="lock" data-icon="randomBackground" src="img/lock.svg"></div>
+        <div><img id="randomBackground" src="img/randomize.svg"></div>
+      </div>
     </div>
     <div class="colorOverlay">
       <h4>Color Overlay</h4>
       <div class="iconFlex">
-      <div><img class="lock" data-icon="randomColorOverlay" src="img/lock.svg"></div>
-      <div><img id="randomColorOverlay" src="img/randomize.svg"></div>
-    </div>
+        <div><img class="lock" data-icon="randomColorOverlay" src="img/lock.svg"></div>
+        <div><img id="randomColorOverlay" src="img/randomize.svg"></div>
+      </div>
     </div>
     <div class="gradientOverlay">
       <h4>Gradient Overlay</h4>
       <div class="iconFlex">
-      <div><img class="lock" data-icon="randomGradientOverlay" src="img/lock.svg"></div>
-      <div><img id="randomGradientOverlay" src="img/randomize.svg"></div>
-    </div>
+        <div><img class="lock" data-icon="randomGradientOverlay" src="img/lock.svg"></div>
+        <div><img id="randomGradientOverlay" src="img/randomize.svg"></div>
+      </div>
     </div>
     <div class="masterRandomizer">
       <h4>Master Random</h4>
@@ -66,9 +67,11 @@
     <div class="copyCode">
       <h4>Copy Code</h4>
       <div id="copyCodeIcon"><img src="img/copy.svg">
-        <div class="modal">
-          <div id="googleFontCC"></div>
-        </div>
+      </div>
+      <div class="modal">
+        <div><img id="clear" src="img/clear.svg"></div>
+        <div id="googleFontCC"></div>
+        <button onclick="copyToClipboard">Copy Code</button>
       </div>
     </div>
   </div>
