@@ -1,3 +1,7 @@
+header a {
+  padding-left: 0px;
+}
+
 /* ------ Navigation Bar CSS ------ */
 .navigation ul li {
   list-style-type: none;
@@ -8,7 +12,8 @@
 }
 
 .navigation ul li:hover {
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.6);
+  transition: 1.0s ease all;
 }
 
 .navigation {
@@ -23,20 +28,26 @@
   position: fixed;
   left:0px;
   top:0px;
-  width:11%;
+  width:12%;
   float:left;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 30px;
   z-index: 103;
   opacity: 70%;
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.1);
   height: 100%;
+  transition: 0.5s ease all;
 }
 
+.randomController:hover {
+  background-color: rgba(255,255,255,.3);
+
+}
 .randomController h4 {
-  font-size: 14px;
+  font-size: 13px;
   color: black;
   font-weight:bold;
   font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
 }
 
 .iconFlex {
