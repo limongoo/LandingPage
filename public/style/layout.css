@@ -2,7 +2,7 @@
 .navigation ul li {
   list-style-type: none;
   display: inline;
-  float: right;
+  /* float: right; */
   padding: 3px;
   color: white;
 }
@@ -17,6 +17,38 @@
   z-index: 1;
   margin-top: 1.5em;
 }
+
+.regnavigation {
+  position: absolute;
+  z-index: 1;
+  right: 1em;
+  margin-top: 1.5em;
+  top: 0;
+}
+
+.regnavigation ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 3px;
+  color: black;
+}
+
+.regnavigation ul li a {
+  color: black;
+}
+
+.regheader {
+  position: absolute;
+  left: 1em;
+  margin-top: 1.5em;
+  top: 0;
+}
+
+.regheader a {
+  color: black;
+}
+
+
 
 /* ------ Randomization Controller CSS ------ */
 .randomController {

@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700|Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation">
-        <header><a href="index.html">reFRESH</a></header>
+    <header class="regheader"><a href="index.html">reFRESH</a></header>
+    <nav class="regnavigation">
         <ul>
             <li><a href="about.html">info</a></li>
             <li><a href="login.html">account</a></li>
@@ -28,16 +28,18 @@
                 </div>
                 <div class="modal-overlay">
                     <img class="close" src="img/clear-white.svg">
+                    <div class="formBackground">
                     <form name="newUserForm" id="newUserForm">
                         <fieldset>
                         <input name="firstName" id="firstName" type="text" placeholder="First Name"><br><br>
                         <input name="lastName" id="lastName" type="text" placeholder="Last Name"><br><br>
                         <input name="username" id="username" type="text" placeholder="Username"><br><br>
-                        <input name="password" id="password" type="text" placeholder="Password"><br><br>
-                        <input name="confirmPassword" id="confirmPassword" type="text" placeholder="Confirm Password"><br><br>
+                        <input name="password" id="password" type="password" placeholder="Password"><br><br>
+                        <input name="confirmPassword" id="confirmPassword" type="password" placeholder="Confirm Password"><br><br>
                         </fieldset><br>
                         <input type="submit" id="submitNewUser" value="Join Now!">
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,7 +49,7 @@
                 <h3>Welcome back, please log in!</h3><br><br>
                 <form id="existingUser">
                     <input name="userName" id="userName" type="text" placeholder="User Name" maxlength="20"><br><br>
-                    <input name="password" id="password" type="text" placeholder="Password" maxlength="20"><br><br>
+                    <input name="password" id="passWord" type="password" placeholder="Password" maxlength="20"><br><br>
                     <input type="submit" value="Login">
                 </form>
             </div>

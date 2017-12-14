@@ -27,7 +27,9 @@ app.listen(PORT, function() {
 app.post('/signup', function(request, response) {
   client.query(
     `INSERT INTO users (first_name, last_name, username, password)
-    VALUES ($1, $2, $3, $4) ON CONFLICT DO NOTHING;`,
+    VALUES ($1, $2, $3, $4) 
+    RETURNING user_id
+    ON CONFLICT DO NOTHING;`,
     [request.body.first_name,
     request.body.last_name,
     request.body.username,
@@ -44,13 +46,13 @@ app.post('/signup', function(request, response) {
 // Check password in record
 app.post('/login', function(request, response) {
   client.query(
-    `SELECT * FROM users 
+    `SELECT user_id FROM users 
     WHERE username = $1 AND password = $2`,
     [request.body.username,
     request.body.password]
   )
-  .then(function() {
-    response.send('Verified')
+  .then(function(data) {
+    response.send(data)
   })
   .catch(function(err) {
     console.error(err)
@@ -60,9 +62,9 @@ app.post('/login', function(request, response) {
 // INSERT STYLES RECORD
 app.post('/account', function(request, response) {
   client.query(
-    `INSERT INTO styles (styles_id, font, font_color, background_image, color_overlay, gradient_overlay)
+    `INSERT INTO styles (user_id, font, font_color, background_image, color_overlay, gradient_overlay)
     VALUES ($1, $2, $3, $4, $5, $6) ON CONFLICT DO NOTHING;`,
-    [request.body.styles_id,
+    [request.body.user_id,
     request.body.font,
     request.body.font_color,
     request.body.background_image,
@@ -78,18 +80,14 @@ app.post('/account', function(request, response) {
 });
 
 // Get styles data from record
-app.get('/account', function(request, response) {
+app.get('/account/:userId', function(request, response) {
   client.query(
-    `SELECT * FROM users 
-    WHERE font = $1 AND font_color = $2 AND background_image = $3 AND color_overlay = $4 AND gradient_overlay = $5`,
-    [request.body.font,
-    request.body.font_color,
-    request.body.background_image,
-    request.body.color_overlay,
-    request.body.gradient_overlay]
+    `SELECT * FROM styles
+    WHERE user_id = $1`,
+    [request.params.userId]
   )
-  .then(function() {
-    response.send('Data Received')
+  .then(function(data) {
+    response.send(data)
   })
   .catch(function(err) {
     console.error(err)
@@ -115,6 +113,7 @@ function loadDB() {
     CREATE TABLE IF NOT EXISTS
     styles (
       styles_id SERIAL PRIMARY KEY,
+      user_id INTEGER REFERENCES users(user_id),
       font VARCHAR(255),
       font_color VARCHAR(255),
       background_image VARCHAR(255),
