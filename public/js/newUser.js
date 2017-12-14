@@ -5,8 +5,8 @@ var newUser = {};
 newUser.newUserContainer = function() {
   $('#joinButton').on('click', function (event){
     event.preventDefault();
-    $('#newUserForm').show();
-    $('#joinButton').hide();
+    $('#newUserForm').fadeIn(500);
+    // $('#joinButton').hide();
   })
 };
 
@@ -15,8 +15,8 @@ newUser.modalOverlay = function() {
   $('#joinButton').on('click', function(event){
     event.preventDefault();
     $('.modal-overlay').addClass('is-visible');
-    $('.modal-overlay.is-visible').show();
-    $('#joinButton').show();
+    $('.modal-overlay.is-visible').fadeIn(500);
+    // $('#joinButton').show();
   })
 };
 
@@ -25,8 +25,8 @@ newUser.modalClose = function() {
   $('.close').on('click', function(event){
     event.preventDefault();
     $('.modal-overlay').removeClass('is-visible');
-    $('.modal-overlay.is-visible').hide();
-    $('#joinButton').show();
+    $('.modal-overlay.is-visible').fadeOut(500);
+    // $('#joinButton').show();
   })
 };
 
@@ -42,6 +42,7 @@ $('#newUserForm').submit(function(event){
   $.post('/signup', captureUser)
   .done(function(response){
     console.log(response);
+    localStorage.setItem('user_id', response.user_id);
     if(response === 'Insert Complete') {
       window.location.replace('/account.html');
     }
@@ -53,12 +54,14 @@ $('#existingUser').submit(function(event){
   event.preventDefault();
   const loginUser  = {
     username: $('#userName').val(),
-    password: $('#password').val()
+    password: $('#passWord').val()
   }
+  console.log(loginUser);
   $.post('/login', loginUser)
   .done(function(response){
     console.log(response);
-    if(response === 'Verified') {
+    localStorage.setItem('user_id', response.rows[0].user_id);
+    if(response.rowCount > 0) {
       window.location.replace('/account.html');
     }
   })
@@ -77,9 +80,22 @@ newUser.validatePassword = function() {
   });
 };
 
+// Logged In redirect to account
+newUser.redirect = function() {
+    let userId = localStorage.getItem('user_id');
+    if (userId) {
+      window.location.replace('/account.html');
+    }
+};
+
+
+
+
+
 $(document).ready(function(){
   newUser.newUserContainer();
   newUser.modalClose();
   newUser.modalOverlay();
   newUser.validatePassword();
+  newUser.redirect();
 });

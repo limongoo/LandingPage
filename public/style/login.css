@@ -130,3 +130,12 @@ form input[type="submit" i] {
   letter-spacing: 0.1em;
 }
 
+input[type="password" i] {
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+.formBackground {
+  background-color: rgba(255,255,255,0.1);
+  padding: 4%;
+}
