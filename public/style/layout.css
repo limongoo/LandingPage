@@ -71,7 +71,7 @@ header a {
 }
 
 .randomController:hover {
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.5);
 
 }
 .randomController h4 {
@@ -80,6 +80,14 @@ header a {
   font-weight:bold;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
+}
+
+.randomController img {
+  transition: 0.3s ease all;
+}
+
+.randomController img:hover {
+  transform: scale(1.1);
 }
 
 .iconFlex {
