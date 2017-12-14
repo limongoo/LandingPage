@@ -46,7 +46,7 @@ header {
 .navigation ul li {
   list-style-type: none;
   display: inline;
-  float: right;
+  /* float: right; */
   padding: 3px;
   color: white;
   animation: fadein 2s;
