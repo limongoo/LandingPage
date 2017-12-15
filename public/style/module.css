@@ -1,9 +1,9 @@
-/* Account css */
 
+/* Favorite Button */
 .favorite {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 1.5em;
+    right: 1.5em;
     z-index: 10;
     transition: 0.3s ease all;
 }
@@ -13,6 +13,88 @@
 }
 
 
+/* Account css */
+
+.styleContainer {
+    margin: 0 5%;
+    padding: 0;
+    overflow: hidden;
+    clear: both;
+    height: 100vh;
+  }
+
+.center {
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.title {
+    margin: 100px 0;
+    font-weight: 700;
+}
+
+.styleList {
+    text-align: center;
+}
+
+.rowTitle {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: .05em; 
+    font-weight: 600;
+    padding: 0 0 10px;
+    background-color: white;
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid grey;
+    overflow: hidden;
+    display: flex;
+    padding: 20px 0;
+}
+
+.row {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid grey;
+    overflow: hidden;
+    display: flex;
+    padding: 20px 0;
+    transition: 0.3s ease all;
+}
+
+.row:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.rowFont {
+    width: 10%;
+    padding: 7px 0 0 20px;
+    text-align: left;
+}
+.rowFontColor {
+    width: 15%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowImage {
+    width: 20%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowColorO {
+    width: 20%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowGradientO {
+    width: 20%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowCC {
+    width: 20%;
+    padding: 7px 0 0 0;
+}
 
 /*  -------- Media Queries ------- */
 

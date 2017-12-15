@@ -19,14 +19,54 @@
             </ul>
         </nav>
 
-       
-        <h2>Hi!</h2>
+        <div class="fullContainer center">
+            <h1 class="title">Hi.</h1>
+            <div id="favoritesOutput"></div>
+        </div>
+        
+        <!-- <div class="styleContainer center">
+            <ul class="styleList">
+                <li class="rowTitle">
+                    <div class="rowFont">Font</div>
+                    <div class="rowFontColor">Font Color</div>
+                    <div class="rowImage">Background Image</div>
+                    <div class="rowColorO">Color Overlay</div>
+                    <div class="rowGradientO">Gradient Overlay</div>
+                    <div class="rowCC">Copy Code</div>
+                </li>
+                <li class="row">
+                    <div class="rowFont">font</div>
+                    <div class="rowFontColor">font_color</div>
+                    <div class="rowImage">background_image</div>
+                    <div class="rowColorO">color_overlay</div>
+                    <div class="rowGradientO">gradient_overlay</div>
+                    <div class="rowCC"><img src="img/copy.svg"></div>
+                </li>
+            </ul>
+        </div> -->
+
         
 
-        <div id="favoritesOutput"></div>
-
-
-
+    <script id="favorite-template" type="text/x-handlebars-template">
+        <ul class="styleList">
+            <li class="rowTitle">
+                <div class="rowFont">Font</div>
+                <div class="rowFontColor">Font Color</div>
+                <div class="rowImage">Background Image</div>
+                <div class="rowColorO">Color Overlay</div>
+                <div class="rowGradientO">Gradient Overlay</div>
+                <div class="rowCC">Copy Code</div>
+            </li>
+            <li class="row">
+                <div class="rowFont">{{font}}</div>
+                <div class="rowFontColor">{{font_color}}</div>
+                <div class="rowImage">{{background_image}}</div>
+                <div class="rowColorO">{{color_overlay}}</div>
+                <div class="rowGradientO">{{gradient_overlay}}</div>
+                <div class="rowCC"><img src="img/copy.svg"></div>
+            </li>
+        </ul>
+    </script>
     <script type="text/javascript" src="js/token.js"></script>
     <script type="text/javascript" src="js/copyCode.js"></script>
     <script type="text/javascript" src="js/account.js"></script>

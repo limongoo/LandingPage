@@ -2,36 +2,29 @@
 var newUser = {};
 var userID = localStorage.getItem('user_id');
 
-// Get style data
-$('.favorite').on('click', function(event){
-    event.preventDefault();
-    const captureStyles  = {
-        user_id: userID,
-        font: $('.fontStyleOutput').css('font-family'),
-        font_color: $('.fontStyleOutput').css('color'),
-        background_image: $('.randomImg').attr('src'),
-        color_overlay: $('.colorOverlayOutput').css('background'),
-        gradient_overlay: $('.gradientOverlayOutput').css('background-image')
-    }
-    $.post('/account', captureStyles)
-    .done(function(response){
-      if(response === 'Insert Complete') {
-        console.log(response);
-      }
-    });
-});
+
+
+// Compile Handlebars
+newUser.toHtml = function() {
+    // Project Grid
+    var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
+    return favFiller(this); // return compiled templates back to html
+};
 
 // Append data to list
-
 $.get(`/account/${userID}`)
 .then(function(response){
     console.log(response);
     response.rows.forEach(function(row) {
         console.log(row);
         // let element = createElement('p');
-        $('#favoritesOutput').add('p').text(row.font);
-        $('#favoritesOutput').add('p').text(row.font_color);
-    })
+        $('.rowFont').add('p').text(row.font);
+        $('.rowFontColor').add('p').text(row.font_color);
+        $('.rowImage').add('p').text(row.background_image);
+        $('.rowColorO').add('p').text(row.color_overlay);
+        $('.rowGradientO').add('p').text(row.gradient_overlay);
+        $('#favoritesOutput').append(row.toHtml());
+    });
 });
 
 
