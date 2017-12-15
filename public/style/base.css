@@ -13,29 +13,29 @@ header {
 html {font-size: 1em;}
 
 body {
-    background-color: #fff;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    color: rgb(94, 94, 94);
-    letter-spacing: 1px;
-    text-transform: capitalize;
+  background-color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: rgb(94, 94, 94);
+  letter-spacing: 1px;
+  text-transform: capitalize;
 }
 p {
-    margin-bottom: 1.3em;
-    line-height: 1.7;
-    text-transform: none;
+  margin-bottom: 1.3em;
+  line-height: 1.7;
+  text-transform: none;
 }
 
 h1, h2, h3, h4 {
-    margin: 1.414em 0 0.5em;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 2px;
+  margin: 1.414em 0 0.5em;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2px;
 }
 
 h1 {
-    margin-top: 0;
-    font-size: 3.598em;
+  margin-top: 0;
+  font-size: 3.598em;
 }
 
 h2 {font-size: 2.827em;}
@@ -47,52 +47,47 @@ h4 {font-size: 1.414em;}
 small, .font_small {font-size: 0.707em;}
 
 a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
 }
 
-/* a:hover {
-    border-bottom: 2px solid black;
-    padding-bottom: 5px;
-} */
-
 .hide {
-    display: none;
+  display: none;
 }
 
 .display {
-    display: block;
+  display: block;
 }
 
 /*  -------- Media Queries ------- */
 
 /* Mobile */
 @media only screen and (max-width: 653px) and (min-width: 320px) {
-    h1 {
+  h1 {
     margin-top: 0;
     font-size: 2.074em;
-    }
+  }
 
-    h2 {font-size: 1.728em;}
+  h2 {font-size: 1.728em;}
 
-    h3 {font-size: 1.44em;}
+  h3 {font-size: 1.44em;}
 
-    h4 {font-size: 1.2em;}
+  h4 {font-size: 1.2em;}
 }
 
 /* Tablet */
 @media only screen and (max-width: 1280px) and (min-width: 653px) {
-    h1 {
+  h1 {
     margin-top: 0;
     font-size: 2.957em;
-    }
+  }
 
-    h2 {font-size: 2.369em;}
+  h2 {font-size: 2.369em;}
 
-    h3 {font-size: 1.777em;}
+  h3 {font-size: 1.777em;}
 
-    h4 {font-size: 1.333em;}
+  h4 {font-size: 1.333em;}
 }
 
 /* Desktop */
