@@ -4,6 +4,9 @@
 @import 'reset.css';
 @import 'login.css';
 @import 'copyCode.css';
+@import '_core.scss';
+@import '_animations.scss';
+@import '_easing.scss';
 
 header {
   margin-top: 1.5em;
