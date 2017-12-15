@@ -20,10 +20,6 @@
   transition: 0.3s ease all;
 }
 
-.modal:hover {
-  /* transform: scale(1.5); */
-}
-
 .modal {
   position:fixed;
 }
@@ -45,6 +41,18 @@
   height: 300px;
   justify-content: center;
   align-items: center;
+}
+
+#copyButton {
+    padding: 20px 30px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    transition: 0.3s ease all;
+    max-width: 50%;
+    margin: 0 auto;
 }
 
 /* EXPERIMENT */
