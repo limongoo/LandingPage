@@ -23,9 +23,6 @@
   position:fixed;
 }
 
-#googleFontCC {
-}
-
 .modal.is-visible {
   visibility: visible;
 }
@@ -34,8 +31,9 @@
   display: none;
   float: right;
   height: 4vh;
-  /* max-height: calc(100% - 100px);
-  top: 50%;
-  transform: translate(-50%, -50%); */
-
 }
+
+
+/* EXPERIMENT */
+
+/* END EXPERIEMNT  */

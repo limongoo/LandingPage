@@ -15,10 +15,8 @@ modal.copyCodeModal = function () {
 modal.hideModalOverlay = function () {
   $('#clear-white').on('click', function(event) {
     event.preventDefault();
-    $('.modal').removeClass('is-visible');
-    // $('.modal').hide();
+    $('.modal').removeClass('is-visible');    // $('.modal').hide();
     console.log('anything');
-    // $('#clear-white').hide();
   })
 };
 
@@ -57,12 +55,9 @@ function copyToClipboard() {
   $temp.remove();
 }
 
+//BEGIN experiment for transitional modal
 
-
-
-
-
-
+// END experiment for modal window transition effects
 
 $(document).ready(function(){
   modal.copyCodeModal();
