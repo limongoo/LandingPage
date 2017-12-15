@@ -13,17 +13,13 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Nunito|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Patua+One|Play|Playfair+Display|Poiret+One|Poppins|Prociono|Questrial|Quicksand|Rajdhani|Ranchers|Roboto|Roboto+Condensed|Roboto+Mono|Rokkitt|Rubik|Shadows+Into+Light|Shrikhand|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro|Spectral+SC|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Vollkorn+SC|Work+Sans|Yanone+Kaffeesatz" rel="stylesheet">
 </head>
 <body>
-
   <nav class="navigation">
     <ul>
       <li><a href="about.html">info</a></li>
       <li><a class="login" href="login.html">account</a></li>
     </ul>
   </nav>
-
   <div class="randomController">
-    <!-- <div><img id="clear-white" src="img/clear-white.svg"></div> -->
-
     <header><a href="index.html">reFRESH</a></header>
     <!-- Controls -->
     <div class="fontStyle">
@@ -62,7 +58,7 @@
       </div>
     </div>
     <div class="masterRandomizer">
-      <h4>Master Random</h4>
+      <h4>All Random</h4>
       <div><img id="randomizer" src="img/randomize.svg"></div>
     </div>
     <div class="copyCode">
@@ -71,24 +67,27 @@
       </div>
       <div class="modal">
         <div><img id="clear-white" src="img/clear-white.svg"></div>
-        <div id="googleFontCC"></div>
-        <button id="copyButton">Copy Code</button>
+        <div id="modalContent">
+          <div id="googleFontCC"></div>
+          <button id="copyButton">Copy Code</button>
+        </div>
       </div>
     </div>
   </div>
   <div class="preview">
     <!-- Landing Preview -->
-    <h1 id="h1Preview" class="fontStyleOutput fontColorOutput">Sample Header</h1>
-    <p id="paraPreview" class="fontStyleOutput fontColorOutput">
-      Sensors indicate no shuttle or other ships in this sector.
-      According to coordinates, we have travelled 7,000 light years and are located near the system J-25.
-      Tractor beam released, sir. Force field maintaining our hull integrity. Damage report? Sections 27, 28 and 29 on decks four, five and six destroyed.
-      Without our shields, at this range it is probable a photon detonation could destroy the Enterprise.
+    <h1 id="h1Preview" contenteditable class="fontStyleOutput fontColorOutput">reFRESH</h1>
+    <p id="paraPreview" contenteditable class="fontStyleOutput fontColorOutput">
+      Welcome to reFRESH! This site is built for you to create however and whatever you want.
+      Quick tutorial: on the left hand side of the page you have two options (a lock or refresh
+      button). By clicking the refresh button it will randomize font style/color, background image,
+      background color or gradient style. Once you've found what you like, LOCK it! Continue through
+      the other options until you are satisfied. Love what you have? Press the "Copy Code" button
+      and bring the creation to your own site! Enjoy!
     </p>
     <div class="favorite"><img src="img/fav.svg"></div>
     <div class="credit"></div>
     <div class="overlayOutput">
-      <!-- <div class="backgroundOutput"><img class="randomImg"></div> -->
       <div class="backgroundOutput">
         <img class="randomImg">
         <div class="colorOverlayOutput"></div>

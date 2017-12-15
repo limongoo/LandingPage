@@ -17,6 +17,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.3s ease all;
 }
 
 .modal {
@@ -33,6 +34,26 @@
   height: 4vh;
 }
 
+#modalContent {
+  padding-top: 10%;
+  display: flex;
+  flex-direction:column;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+#copyButton {
+    padding: 20px 30px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    transition: 0.3s ease all;
+    max-width: 50%;
+    margin: 0 auto;
+}
 
 /* EXPERIMENT */
 
