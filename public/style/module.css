@@ -14,11 +14,10 @@
 
 
 /* Account css */
-
 .styleContainer {
     margin: 0 5%;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     clear: both;
     height: 100vh;
   }
@@ -28,9 +27,31 @@
     /* margin: 0 auto; */
 }
 
+.accountCC {
+    transition: 0.3s ease all;
+}
+
+.accountCC:hover {
+    transform: scale(1.1);
+}
+
+.space {
+    padding-top: 200px;
+}
+
+.titleFlex {
+    display: flex;
+    flex-direction: row;
+}
+
 .title {
     margin: 100px 0;
     font-weight: 700;
+}
+
+.logout {
+    color: black;
+    justify-content: flex-end;
 }
 
 .styleList {
@@ -41,7 +62,7 @@
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: .05em; 
-    font-weight: 600;
+    font-weight: 700;
     padding: 0 0 10px;
     background-color: white;
     width: 100%;
@@ -50,6 +71,7 @@
     overflow: hidden;
     display: flex;
     padding: 20px 0;
+    color: rgb(83, 83, 83);
 }
 
 .row {
@@ -66,6 +88,38 @@
     background-color: rgb(233, 233, 233);
 }
 
+/* List Header */
+.rowFontH {
+    width: 10%;
+    padding: 7px 0 0 20px;
+    text-align: left;
+}
+.rowFontColorH {
+    width: 15%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowImageH {
+    width: 20%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowColorOH {
+    width: 20%;
+    padding: 7px 0 0 20px;
+    text-align: left;
+}
+.rowGradientOH {
+    width: 20%;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+.rowCCH {
+    width: 20%;
+    padding: 7px 0 0 0;
+}
+
+/* List Item */
 .rowFont {
     width: 10%;
     padding: 7px 0 0 20px;
@@ -80,10 +134,11 @@
     width: 20%;
     padding: 7px 0 0 0;
     text-align: left;
+    overflow: hidden;
 }
 .rowColorO {
     width: 20%;
-    padding: 7px 0 0 0;
+    padding: 7px 0 0 20px;
     text-align: left;
 }
 .rowGradientO {

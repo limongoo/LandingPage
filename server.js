@@ -25,11 +25,12 @@ app.listen(PORT, function() {
 
 // INSERT RECORD
 app.post('/signup', function(request, response) {
+  console.log(request.body);
   client.query(
     `INSERT INTO users (first_name, last_name, username, password)
     VALUES ($1, $2, $3, $4) 
-    RETURNING user_id
-    ON CONFLICT DO NOTHING;`,
+    ON CONFLICT DO NOTHING
+    RETURNING user_id;`,
     [request.body.first_name,
     request.body.last_name,
     request.body.username,
@@ -39,6 +40,7 @@ app.post('/signup', function(request, response) {
     response.send('Insert Complete')
   })
   .catch(function(err) {
+    console.log(request.body);
     console.error(err)
   });
 });
