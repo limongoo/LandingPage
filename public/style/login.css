@@ -5,6 +5,7 @@
   overflow: hidden;
   clear: both;
   height: 100vh;
+  animation: fadein 1.5s;
 }
 
 .flex {

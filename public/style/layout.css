@@ -9,6 +9,7 @@ header a {
   display: inline;
   padding: 3px;
   color: white;
+  animation: fadein 2.0s;
 }
 
 .navigation ul li:hover {
@@ -68,6 +69,7 @@ header a {
   background-color: rgba(255,255,255,.1);
   height: 100%;
   transition: 0.5s ease all;
+  animation: fadein 2.0s;
 }
 
 .randomController:hover {
@@ -115,21 +117,26 @@ header a {
 
 #h1Preview {
   position:absolute;
-  top:30%;
+  top:20%;
   margin:0 auto;
   width: 100%;
   z-index:1;
+  animation: fadein 2.0s;
+  color: white;
 }
 
 #paraPreview {
   position:absolute;
-  top:50%;
+  top:40%;
   margin:0 auto;
   text-align:center;
   vertical-align: middle;
   z-index:1;
   width: 50%;
   left: 25%;
+  font-size: 20px;
+  animation: fadein 2.0s;
+  color: white;
 }
 
 .randomImg {
