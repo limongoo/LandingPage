@@ -20,6 +20,7 @@
     /* overflow: hidden; */
     clear: both;
     height: 100vh;
+    animation: fadein 2.0s;
   }
 
 .center {
@@ -61,7 +62,7 @@
 .rowTitle {
     font-size: 1em;
     text-transform: uppercase;
-    letter-spacing: .05em; 
+    letter-spacing: .05em;
     font-weight: 700;
     padding: 0 0 10px;
     background-color: white;
@@ -155,15 +156,15 @@
 
 /* Mobile */
 @media only screen and (max-width: 653px) and (min-width: 320px) {
-    
+
     }
-    
+
     /* Tablet */
     @media only screen and (max-width: 1280px) and (min-width: 653px) {
-       
+
     }
-    
+
     /* Desktop */
     @media only screen and (max-width: 9000px) and (min-width: 1280px) {
-    
+
     }

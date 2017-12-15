@@ -1,78 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>reFresh</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-        <link rel="stylesheet" href="style/base.css">
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700|Material+Icons" rel="stylesheet">
-    </head>
-    <body>
-        <header class="regheader"><a href="index.html">reFRESH</a></header>
-        <nav class="regnavigation">
-            <ul>
-                <li><a href="about.html">info</a></li>
-                <li><a href="login.html">account</a></li>
-                <li><a class="logout" href="#">Log Out</a></li>
-            </ul>
-        </nav>
+<head>
+  <title>reFresh</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <link rel="stylesheet" href="style/base.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700|Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="regheader"><a href="index.html">reFRESH</a></header>
+  <nav class="regnavigation">
+    <ul>
+      <li><a href="about.html">info</a></li>
+      <li><a href="login.html">account</a></li>
+      <li><a class="logout" href="#">Log Out</a></li>
+    </ul>
+  </nav>
 
-        <div class="styleContainer center">
-            <div class="titleFlex">
-                <h1 class="title">Hi.</h1>
-            </div>
-            <ul class="styleList">
-                    <li class="rowTitle">
-                        <div class="rowFontH">Font</div>
-                        <div class="rowFontColorH">Font Color</div>
-                        <div class="rowImageH">Background Image</div>
-                        <div class="rowColorOH">Color Overlay</div>
-                        <div class="rowGradientOH">Gradient Overlay</div>
-                        <div class="rowCCH">Copy Code</div>
-                    </li>
-                    <div id="favoritesOutput"></div>
-            </ul>
-            <div class="space"></div>
-        </div>
-        
-        
-        <!-- <div class="styleContainer center">
-            <ul class="styleList">
-                <li class="rowTitle">
-                    <div class="rowFont">Font</div>
-                    <div class="rowFontColor">Font Color</div>
-                    <div class="rowImage">Background Image</div>
-                    <div class="rowColorO">Color Overlay</div>
-                    <div class="rowGradientO">Gradient Overlay</div>
-                    <div class="rowCC">Copy Code</div>
-                </li>
-                <li class="row">
-                    <div class="rowFont">font</div>
-                    <div class="rowFontColor">font_color</div>
-                    <div class="rowImage">background_image</div>
-                    <div class="rowColorO">color_overlay</div>
-                    <div class="rowGradientO">gradient_overlay</div>
-                    <div class="rowCC"><img src="img/copy.svg"></div>
-                </li>
-            </ul>
-        </div> -->
-
-        
-
-    <script id="favorite-template" type="text/x-handlebars-template">
-            <li class="row">
-                <div class="rowFont">{{font}}</div>
-                <div class="rowFontColor">{{font_color}}</div>
-                <div class="rowImage">{{background_image}}</div>
-                <div class="rowColorO">{{color_overlay}}</div>
-                <div class="rowGradientO">{{gradient_overlay}}</div>
-                <div class="rowCC"><img id="copyButton" class="accountCC" src="img/copy.svg"></div>
-            </li> 
-    </script>
-    <script type="text/javascript" src="js/token.js"></script>
-    <script type="text/javascript" src="js/copyCode.js"></script>
-    <script type="text/javascript" src="js/account.js"></script>
-    </body>
+  <div class="styleContainer center">
+    <div class="titleFlex">
+      <h1 class="title">Hi.</h1>
+    </div>
+    <ul class="styleList">
+      <li class="rowTitle">
+        <div class="rowFontH">Font</div>
+        <div class="rowFontColorH">Font Color</div>
+        <div class="rowImageH">Background Image</div>
+        <div class="rowColorOH">Color Overlay</div>
+        <div class="rowGradientOH">Gradient Overlay</div>
+        <div class="rowCCH">Copy Code</div>
+      </li>
+      <div id="favoritesOutput"></div>
+    </ul>
+    <div class="space"></div>
+  </div>
+  <script id="favorite-template" type="text/x-handlebars-template">
+    <li class="row">
+      <div class="rowFont">{{font}}</div>
+      <div class="rowFontColor">{{font_color}}</div>
+      <div class="rowImage">{{background_image}}</div>
+      <div class="rowColorO">{{color_overlay}}</div>
+      <div class="rowGradientO">{{gradient_overlay}}</div>
+      <div class="rowCC"><img id="copyButton" class="accountCC" src="img/copy.svg"></div>
+    </li>
+  </script>
+  <script type="text/javascript" src="js/token.js"></script>
+  <script type="text/javascript" src="js/copyCode.js"></script>
+  <script type="text/javascript" src="js/account.js"></script>
+</body>
 </html>
