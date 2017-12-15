@@ -1,5 +1,5 @@
 /* Modal Overlay */
-/* .modal {
+.modal {
   background-color: rgb(94, 94, 94);
   color: white;
   text-align: center;
@@ -21,139 +21,19 @@
 
 .modal {
   position:fixed;
-} */
-
-#googleFontCC {
 }
 
-/* .modal.is-visible {
+.modal.is-visible {
   visibility: visible;
-} */
-
-/* #clear-white {
-  display: none;
-  float: right;
-  height: 4vh;
-} */
-
-/* EXPERIMENT */
-
-#copyCodeIcon {
-  padding: 10px 0;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #fff;
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-#copyCodeIcon:before, #copyCodeIcon:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 2px;
-  -webkit-transition: width 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: width 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-#copyCodeIcon:before {
-  width: 100%;
-  background-color: #9d9d9d;
-}
-#copyCodeIcon:after {
-  width: 0;
-  background-color: #505050;
-}
-#copyCodeIcon:hover:after {
-  width: calc(100% + 1px);
-}
-
-.modal {
-  position: absolute;
-  overflow: hidden;
-  width: 0;
-  height: 2px;
-  color: #fff;
-  background-color: #505050;
-  -webkit-transition: width 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: width 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.modal.is-open {
-  -webkit-transition: width 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: width 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), left 400ms 0ms cubic-bezier(0.165, 0.84, 0.44, 1), height 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), top 400ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-/* .modal.is-open li {
-  opacity: 1;
-} */
-.modal.is-open #clear-white {
-  opacity: 1;
-  -webkit-transition: all 500ms 700ms;
-  transition: all 500ms 700ms;
-}
-/*
-.modal a {
-  position: relative;
-  font-weight: 300;
-  text-decoration: none;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #fff;
-}
-.modal a:before, .modal a:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 2px;
-  -webkit-transition: width 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: width 400ms cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 
 #clear-white {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  border: 0;
-  outline: none;
-  opacity: 0;
-  background-color: transparent;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-#clear-white:before, #clear-white:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 15px;
-  height: 3px;
-  background-color: #fff;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-#clear-white:after {
-  width: 3px;
-  height: 15px;
+  display: none;
+  float: right;
+  height: 4vh;
 }
 
-/* .visuallyhidden {
-position: absolute;
-overflow: hidden;
-clip: rect(0 0 0 0);
-width: 1px;
-height: 1px;
-margin: -1px;
-padding: 0;
-border: 0;
-} */
+
+/* EXPERIMENT */
+
 /* END EXPERIEMNT  */
