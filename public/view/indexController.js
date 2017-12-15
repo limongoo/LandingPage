@@ -40,38 +40,15 @@ $('#randomGradientOverlay').click(function(){
   modal.displayCC();
 });
 
-//Master Random Generator
-$('#randomizer').click(function(){
-  //random font
-  let fontRandom = fonts[Math.floor(Math.random() * fonts.length)];
-  console.log(fontRandom);
-  $('.fontStyleOutput').css('font-family', fontRandom);
-  //random font color
-  let colorRandom = '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
-  console.log(colorRandom);
-  $('.fontStyleOutput, .fontColorOutput').css('color', colorRandom);
-  //random color overlay
-  let overlayRandom = random_rgba();
-  $('.colorOverlayOutput').css('background', overlayRandom);
-  console.log(overlayRandom);
-  let gradientRandom = random_rgba();
-  let gradientRandom2 = random_rgba();
-  $('.gradientOverlayOutput').css('background-image', `linear-gradient(${gradientRandom},${gradientRandom2})`);
-  console.log(gradientRandom);
-  console.log(gradientRandom2);
-  //random image function
-  getRandom();
-  modal.displayCC();
-});
-
 // Function to hide refresh icon if user clicks lock icon
 $('.lock').on('click', function(event){
   event.preventDefault();
-  // console.log($('.randomFont').css('display')==='none');
   var iconName= '#' + $(this).attr('data-icon');
-  if ($(iconName).css('display')==='none') {
-    $(iconName).show();
-  } else {
-    $(iconName).hide();
-  }
+  $(iconName).toggleClass('hide');
+});
+
+//Master Random Generator
+$('#randomizer').click(function(){
+  $('img[data-content="refresh"]').not('.hide').trigger('click');
+  modal.displayCC();
 });
