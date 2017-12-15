@@ -1,4 +1,4 @@
-// Randomization functionalities for the controller
+/* ------ Randomization functionalities for the controller ------ */
 
 //Random Font
 $('#randomFont').click(function(){

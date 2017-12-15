@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>reFresh</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <link rel="stylesheet" href="style/base.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700|Material+Icons" rel="stylesheet">
+  <title>reFresh</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <link rel="stylesheet" href="style/base.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700|Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header class="regheader"><a href="index.html">reFRESH</a></header>
-    <nav class="regnavigation">
-        <ul>
-            <li><a href="about.html">info</a></li>
-            <li><a href="login.html">account</a></li>
-        </ul>
-    </nav>
-    <div class="fullContainer flex">
-        <div class="flex2">
-            <div class="backgroundLogin">
-
-                    <!-- <input type="button" id="joinButton" value="Create New Account!"> -->
-                <div id="loginContainer">
-                    <h3 class="createTitle">Create your free account!</h3><br><br>
-                    <div id="joinButton">Create Account!</div>
-                </div>
-                <div class="modal-overlay">
-                    <img class="close" src="img/clear-white.svg">
-                    <div class="formBackground">
-                    <form name="newUserForm" id="newUserForm">
-                        <fieldset>
-                        <input name="firstName" id="firstName" type="text" placeholder="First Name"><br><br>
-                        <input name="lastName" id="lastName" type="text" placeholder="Last Name"><br><br>
-                        <input name="username" id="username" type="text" placeholder="Username"><br><br>
-                        <input name="password" id="password" type="password" placeholder="Password"><br><br>
-                        <input name="confirmPassword" id="confirmPassword" type="password" placeholder="Confirm Password"><br><br>
-                        </fieldset><br>
-                        <input type="submit" id="submitNewUser" value="Join Now!">
-                    </form>
-                    </div>
-                </div>
-            </div>
+  <header class="regheader"><a href="index.html">reFRESH</a></header>
+  <nav class="regnavigation">
+    <ul>
+      <li><a href="about.html">info</a></li>
+      <li><a href="login.html">account</a></li>
+    </ul>
+  </nav>
+  <div class="fullContainer flex">
+    <div class="flex2">
+      <div class="backgroundLogin">
+        <div id="loginContainer">
+          <h3 class="createTitle">Create your free account!</h3><br><br>
+          <div id="joinButton">Create Account!</div>
         </div>
-
-        <div class="flex2">
-            <div id="existingUserContainer">
-                <h3>Welcome back, please log in!</h3><br><br>
-                <form id="existingUser">
-                    <input name="userName" id="userName" type="text" placeholder="User Name" maxlength="20"><br><br>
-                    <input name="password" id="passWord" type="password" placeholder="Password" maxlength="20"><br><br>
-                    <input type="submit" value="Login">
-                </form>
-            </div>
+        <div class="modal-overlay">
+          <img class="close" src="img/clear-white.svg">
+          <div class="formBackground">
+            <form name="newUserForm" id="newUserForm">
+              <fieldset>
+                <input name="firstName" id="firstName" type="text" placeholder="First Name"><br><br>
+                <input name="lastName" id="lastName" type="text" placeholder="Last Name"><br><br>
+                <input name="username" id="username" type="text" placeholder="Username"><br><br>
+                <input name="password" id="password" type="password" placeholder="Password"><br><br>
+                <input name="confirmPassword" id="confirmPassword" type="password" placeholder="Confirm Password"><br><br>
+              </fieldset><br>
+              <input type="submit" id="submitNewUser" value="Join Now!">
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
-    <script src="js/newUser.js"></script>
-    </body>
+    <div class="flex2">
+      <div id="existingUserContainer">
+        <h3>Welcome back, please log in!</h3><br><br>
+        <form id="existingUser">
+          <input name="userName" id="userName" type="text" placeholder="User Name" maxlength="20"><br><br>
+          <input name="password" id="passWord" type="password" placeholder="Password" maxlength="20"><br><br>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/newUser.js"></script>
+</body>
 </html>
