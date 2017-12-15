@@ -19,35 +19,36 @@
     </ul>
   </nav>
 
-  <div class="styleContainer center">
-    <div class="titleFlex">
-      <h1 class="title">Hi.</h1>
-    </div>
-    <ul class="styleList">
-      <li class="rowTitle">
-        <div class="rowFontH">Font</div>
-        <div class="rowFontColorH">Font Color</div>
-        <div class="rowImageH">Background Image</div>
-        <div class="rowColorOH">Color Overlay</div>
-        <div class="rowGradientOH">Gradient Overlay</div>
-        <div class="rowCCH">Copy Code</div>
-      </li>
-      <div id="favoritesOutput"></div>
-    </ul>
-    <div class="space"></div>
-  </div>
-  <script id="favorite-template" type="text/x-handlebars-template">
-    <li class="row">
-      <div class="rowFont">{{font}}</div>
-      <div class="rowFontColor">{{font_color}}</div>
-      <div class="rowImage">{{background_image}}</div>
-      <div class="rowColorO">{{color_overlay}}</div>
-      <div class="rowGradientO">{{gradient_overlay}}</div>
-      <div class="rowCC"><img id="copyButton" class="accountCC" src="img/copy.svg"></div>
-    </li>
-  </script>
-  <script type="text/javascript" src="js/token.js"></script>
-  <script type="text/javascript" src="js/copyCode.js"></script>
-  <script type="text/javascript" src="js/account.js"></script>
-</body>
+        <div class="styleContainer center">
+            <div class="titleFlex">
+                <h1 class="title">Hi.</h1>
+            </div>
+            <ul class="styleList">
+                    <li class="rowTitle">
+                        <div class="rowFontH">Font</div>
+                        <div class="rowFontColorH">Font Color</div>
+                        <div class="rowImageH">Background Image</div>
+                        <div class="rowColorOH">Color Overlay</div>
+                        <div class="rowGradientOH">Gradient Overlay</div>
+                        <div class="rowCCH">Copy Code</div>
+                    </li>
+                    <div id="favoritesOutput"></div>
+            </ul>
+            <div class="space"></div>
+        </div>
+
+    <script id="favorite-template" type="text/x-handlebars-template">
+            <li class="row">
+                <div class="rowFont">{{font}}</div>
+                <div class="rowFontColor">{{font_color}}</div>
+                <div class="rowImage">{{background_image}}</div>
+                <div class="rowColorO">{{color_overlay}}</div>
+                <div class="rowGradientO">{{gradient_overlay}}</div>
+                <div class="rowCC"><img id="ccAccount" class="accountCC" src="img/copy.svg"></div>
+            </li> 
+    </script>
+    <script type="text/javascript" src="js/token.js"></script>
+    <script type="text/javascript" src="js/copyCode.js"></script>
+    <script type="text/javascript" src="js/account.js"></script>
+    </body>
 </html>
