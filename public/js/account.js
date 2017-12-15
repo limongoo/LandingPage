@@ -18,14 +18,10 @@ $.get(`/account/${userID}`)
     var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
     response.rows.forEach(function(row) {
         console.log(row);
-        // let element = createElement('p');
-        // $('.rowFont').add('p').text(row.font);
-        // $('.rowFontColor').add('p').text(row.font_color);
-        // $('.rowImage').add('p').text(row.background_image);
-        // $('.rowColorO').add('p').text(row.color_overlay);
-        // $('.rowGradientO').add('p').text(row.gradient_overlay);
         $('#favoritesOutput').append(favFiller(row));
     });
+    $('#ccAccount').on('click', copyCC)
+    // $('.row').html(message);
 });
 
 
@@ -33,6 +29,16 @@ $.get(`/account/${userID}`)
 // Hi username
 // $('.hi').html('');
 
+// Copy function
+function copyCC() {
+    var $temp = $("<input>");
+    console.log("Hi there");
+    $(this).closest('.row').append($temp);
+    $temp.val($(this).closest('.row').text()).select();
+    console.log($(this).closest('.row'));
+    document.execCommand("copy");
+    $temp.remove();
+}
 
 
 // Log Out account
@@ -45,4 +51,5 @@ newUser.logOut = function() {
 
 $(document).ready(function(){
     newUser.logOut();
+    // $('#ccAccount').on('click', copyCC);
 });

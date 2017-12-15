@@ -55,6 +55,8 @@ function copyToClipboard() {
   $temp.remove();
 }
 
+
+
 //BEGIN experiment for transitional modal
 
 // END experiment for modal window transition effects
