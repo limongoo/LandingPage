@@ -20,8 +20,7 @@ $.get(`/account/${userID}`)
         console.log(row);
         $('#favoritesOutput').append(favFiller(row));
     });
-    $('#ccAccount').on('click', copyCC)
-    // $('.row').html(message);
+    $('#ccAccount').on('click', copyCC);
 });
 
 
@@ -51,5 +50,4 @@ newUser.logOut = function() {
 
 $(document).ready(function(){
     newUser.logOut();
-    // $('#ccAccount').on('click', copyCC);
 });
