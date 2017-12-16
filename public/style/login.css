@@ -129,6 +129,11 @@ form input[type="submit" i] {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  transition: 0.3s ease all;
+}
+
+form input[type="submit" i]:hover {
+  background-color: #f15e22;
 }
 
 input[type="password" i] {

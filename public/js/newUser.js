@@ -14,7 +14,7 @@ newUser.newUserContainer = function() {
 newUser.modalOverlay = function() {
   $('#joinButton').on('click', function(event){
     event.preventDefault();
-    $('.modal-overlay').addClass('is-visible');
+    $('.modal-overlay').addClass('is-visible').fadeIn(500);
     $('.modal-overlay.is-visible').fadeIn(500);
     // $('#joinButton').show();
   })
@@ -24,7 +24,7 @@ newUser.modalOverlay = function() {
 newUser.modalClose = function() {
   $('.close').on('click', function(event){
     event.preventDefault();
-    $('.modal-overlay').removeClass('is-visible');
+    $('.modal-overlay').removeClass('is-visible').fadeOut(500);
     $('.modal-overlay.is-visible').fadeOut(500);
     // $('#joinButton').show();
   })

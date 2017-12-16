@@ -6,6 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 
+// const token = process.env.TOKEN || myApiToken;
+// const conString = process.env.DATABASE_URL;
 const conString = 'postgres://ivanlimongan@localhost:5432/landinguser';
 const client = new pg.Client(conString);
 client.connect();
@@ -95,8 +97,6 @@ app.get('/account/:userId', function(request, response) {
     console.error(err)
   });
 });
-
-
 
 
 // CREATE TABLES
