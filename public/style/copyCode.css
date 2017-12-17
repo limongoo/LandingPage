@@ -3,6 +3,7 @@
   background-color: rgb(70, 70, 70);
   color: white;
   text-align: center;
+  position:fixed;
   font-size: 18px;
   opacity: 0.9;
   min-height:50vh;
@@ -20,10 +21,6 @@
   transition: 0.3s ease all;
 }
 
-.modal {
-  position:fixed;
-}
-
 .modal.is-visible {
   visibility: visible;
 }
@@ -39,6 +36,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-transform: none;
 }
 
 #copyButton {
@@ -56,7 +54,3 @@
 #copyButton:hover {
   background-color: rgba(0,0,0,0.9);
 }
-
-/* EXPERIMENT */
-
-/* END EXPERIEMNT  */
