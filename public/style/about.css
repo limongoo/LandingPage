@@ -17,6 +17,11 @@ header {
   justify-content: center;
   align-items: center;
   display: flex;
+  overflow: scroll;
+}
+
+.aboutBack {
+  background-color: rgb(19, 19, 19);
 }
 
 .aboutParagraph {

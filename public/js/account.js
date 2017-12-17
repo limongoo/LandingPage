@@ -27,12 +27,16 @@ $.get(`/account/${userID}`)
 });
 
 // Hi username
-// $('.hi').html('');
+// function getUserName() {
+//     let userUserName = JSON.parse(localStorage.getItem('userName'));
+//     $('.hi').text('Hi '+userUserName+'.');
+//     // $('.hi').html('Hi '+userUserName+'.');
+// }
 
 // Copy function
 function copyCC() {
     var $temp = $("<input>");
-    console.log("Hi there");
+    console.log("Code Copied");
     $(this).closest('.row').append($temp);
     $temp.val($(this).closest('.row').text()).select();
     console.log($(this).closest('.row'));
@@ -50,4 +54,5 @@ newUser.logOut = function() {
 
 $(document).ready(function(){
     newUser.logOut();
+    // getUserName()
 });

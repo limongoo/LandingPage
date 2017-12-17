@@ -19,6 +19,7 @@ $('.favorite').on('click', function(event){
     .done(function(response){
       if(response === 'Insert Complete') {
         console.log(response);
+        $('.favHook').attr('src', '../img/fav-red.svg');
       }
     });
 });
