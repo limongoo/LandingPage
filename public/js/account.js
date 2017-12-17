@@ -1,6 +1,7 @@
 'use strict';
 var newUser = {};
 var userID = localStorage.getItem('user_id');
+var retrieveUser = localStorage.getItem('userName');
 
 
 // Compile Handlebars
@@ -27,11 +28,11 @@ $.get(`/account/${userID}`)
 });
 
 // Hi username
-// function getUserName() {
-//     let userUserName = JSON.parse(localStorage.getItem('userName'));
-//     $('.hi').text('Hi '+userUserName+'.');
-//     // $('.hi').html('Hi '+userUserName+'.');
-// }
+function getUserName() {
+    console.log(retrieveUser);
+    $('.title').text('Hi '+retrieveUser+'.');
+    // $('.hi').html('Hi '+userUserName+'.');
+}
 
 // Copy function
 function copyCC() {
@@ -54,5 +55,5 @@ newUser.logOut = function() {
 
 $(document).ready(function(){
     newUser.logOut();
-    // getUserName()
+    getUserName()
 });
