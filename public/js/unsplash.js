@@ -25,3 +25,4 @@ function getRandom() {
 $(document).ready(function(){
     getRandom();
 });
+

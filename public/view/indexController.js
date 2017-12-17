@@ -52,3 +52,4 @@ $('#randomizer').click(function(){
   $('img[data-content="refresh"]').not('.hide').trigger('click');
   modal.displayCC();
 });
+
