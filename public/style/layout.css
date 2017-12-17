@@ -129,6 +129,7 @@ header a {
   z-index:1;
   animation: fadein 2.0s;
   color: white;
+  text-transform: initial;
 }
 
 #paraPreview {

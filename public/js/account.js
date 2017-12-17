@@ -3,14 +3,6 @@ var newUser = {};
 var user = JSON.parse(localStorage.getItem('user'));
 // var retrieveUser = localStorage.getItem('userName');
 
-
-// Compile Handlebars
-// newUser.toHtml = function() {
-//     // Project Grid
-//     var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
-//     return favFiller(this); // return compiled templates back to html
-// };
-
 // Append data to list
 $.get(`/account/${user.user_id}`)
 .then(function(response){
