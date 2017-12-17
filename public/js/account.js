@@ -5,11 +5,11 @@ var retrieveUser = localStorage.getItem('userName');
 
 
 // Compile Handlebars
-newUser.toHtml = function() {
-    // Project Grid
-    var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
-    return favFiller(this); // return compiled templates back to html
-};
+// newUser.toHtml = function() {
+//     // Project Grid
+//     var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
+//     return favFiller(this); // return compiled templates back to html
+// };
 
 // Append data to list
 $.get(`/account/${userID}`)
@@ -31,7 +31,6 @@ $.get(`/account/${userID}`)
 function getUserName() {
     console.log(retrieveUser);
     $('.title').text('Hi '+retrieveUser+'.');
-    // $('.hi').html('Hi '+userUserName+'.');
 }
 
 // Copy function

@@ -39,16 +39,28 @@ $('#newUserForm').submit(function(event){
     username: $('#username').val(),
     password: $('#password').val()
   }
+  console.log(captureUser);
   $.post('/signup', captureUser)
   .done(function(response){
     console.log(response);
     localStorage.setItem('user_id', response.user_id);
-    // localStorage.setItem('userName', response.username);
     if(response === 'Insert Complete') {
-      window.location.replace('/account.html');
+      // window.location.replace('/account.html');
+      let userId = localStorage.getItem('user_id');
+      console.log(userId);
+      if (userId) {
+        window.location.replace('/account.html');
+      }
     }
   })
 });
+// Logged In redirect to account
+// newUser.redirect = function() {
+//   let userId = localStorage.getItem('user_id');
+//   if (userId) {
+//     window.location.replace('/account.html');
+//   }
+// };
 
 // Login Submit
 $('#existingUser').submit(function(event){
