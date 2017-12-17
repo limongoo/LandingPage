@@ -3,7 +3,6 @@ var newUser = {};
 var userID = localStorage.getItem('user_id');
 
 
-
 // Compile Handlebars
 newUser.toHtml = function() {
     // Project Grid
@@ -18,13 +17,14 @@ $.get(`/account/${userID}`)
     var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
     response.rows.forEach(function(row) {
         console.log(row);
-        $('#favoritesOutput').append(favFiller(row));
-    });
-    $('#ccAccount').on('click', copyCC)
-    // $('.row').html(message);
+        $('#favoritesOutput').append(favFiller(row));  
+        
+    })
+    let counter = 0;
+    counter++;
+    $('.rowName').html('Favorite '+counter);  
+    $('#ccAccount').on('click', copyCC);  
 });
-
-
 
 // Hi username
 // $('.hi').html('');
@@ -40,16 +40,14 @@ function copyCC() {
     $temp.remove();
 }
 
-
 // Log Out account
 newUser.logOut = function() {
     $('.logout').click(function() {
       localStorage.clear();
-      window.location.replace('/index.html');
+      window.location.replace('/login.html');
     });
   };
 
 $(document).ready(function(){
     newUser.logOut();
-    // $('#ccAccount').on('click', copyCC);
 });
