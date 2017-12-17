@@ -43,6 +43,7 @@ $('#newUserForm').submit(function(event){
   .done(function(response){
     console.log(response);
     localStorage.setItem('user_id', response.user_id);
+    localStorage.setItem('userName', response.username);
     if(response === 'Insert Complete') {
       window.location.replace('/account.html');
     }
@@ -61,6 +62,7 @@ $('#existingUser').submit(function(event){
   .done(function(response){
     console.log(response);
     localStorage.setItem('user_id', response.rows[0].user_id);
+    localStorage.setItem('userName', JSON.stringify(response.rows[0].username));
     if(response.rowCount > 0) {
       window.location.replace('/account.html');
     }

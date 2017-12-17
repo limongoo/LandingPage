@@ -42,12 +42,9 @@
 
 /*Container for joinButton and newUserForm*/
 #joinButton {
-  /* position: absolute; */
   padding: 20px 30px;
   border: none;
   text-align: center;
-  /* left: 15%;
-  top: 50%; */
   font-size: 20px;
   background-color: rgba(0,0,0,0.6);
   color: white;
@@ -58,14 +55,12 @@
 
 #joinButton:hover {
   background-color: rgba(0,0,0,0.8);
+  background-color: #f15e22;
 }
 
 .createTitle {
   text-align: center;
   color: white;
-  /* top: 34%;
-  position: absolute;
-  left: 8%; */
 }
 
 #loginContainer {
@@ -78,7 +73,6 @@
   text-align: center;
   background-image: url('../img/lines1.jpg');
   background-size: cover;
-  /* background-color: whitesmoke; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -119,6 +113,12 @@ form {
 form input[type="text"] {
   font-size: 16px;
   padding: 10px 15px;
+  border: 8px solid rgb(202, 202, 202);
+  transition: 0.3s ease all;
+}
+
+form input[type="text"]:focus {
+  border: 8px solid rgb(150, 150, 150);
 }
 
 form input[type="submit" i] {
@@ -139,9 +139,19 @@ form input[type="submit" i]:hover {
 input[type="password" i] {
   font-size: 16px;
   padding: 10px 15px;
+  border: 8px solid rgb(202, 202, 202);
+  transition: 0.3s ease all;
+}
+
+input[type="password" i]:focus {
+  border: 8px solid rgb(150, 150, 150);
+}
+
+input[type="password" i]:invalid {
+  border: 8px solid red;
 }
 
 .formBackground {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.2);
   padding: 4%;
 }
