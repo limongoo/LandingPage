@@ -1,5 +1,5 @@
 'use strict';
-var userID = localStorage.getItem('user_id');
+var user = JSON.parse(localStorage.getItem('user'));
 
 let favorites = {};
 
@@ -7,7 +7,7 @@ let favorites = {};
 $('.favorite').on('click', function(event){
     event.preventDefault();
     const captureStyles  = {
-        user_id: userID,
+        user_id: user.user_id,
         font: $('.fontStyleOutput').css('font-family'),
         font_color: $('.fontStyleOutput').css('color'),
         background_image: $('.randomImg').attr('src'),

@@ -43,15 +43,16 @@ $('#newUserForm').submit(function(event){
   $.post('/signup', captureUser)
   .done(function(response){
     console.log(response);
-    localStorage.setItem('user_id', response.user_id);
-    if(response === 'Insert Complete') {
+    
+    // if(response === 'Insert Complete') {
       // window.location.replace('/account.html');
-      let userId = localStorage.getItem('user_id');
-      console.log(userId);
-      if (userId) {
+      // let userId = localStorage.getItem('user');
+      // console.log(userId);
+      if (response.user_id) {
+        localStorage.setItem('user', JSON.stringify(response));
         window.location.replace('/account.html');
       }
-    }
+    
   })
 });
 // Logged In redirect to account
@@ -73,9 +74,8 @@ $('#existingUser').submit(function(event){
   $.post('/login', loginUser)
   .done(function(response){
     console.log(response);
-    localStorage.setItem('user_id', response.rows[0].user_id);
-    localStorage.setItem('userName', loginUser.username);
-    if(response.rowCount > 0) {
+    if (response) {
+      localStorage.setItem('user', JSON.stringify(response));
       window.location.replace('/account.html');
     }
   })
@@ -96,8 +96,8 @@ newUser.validatePassword = function() {
 
 // Logged In redirect to account
 newUser.redirect = function() {
-    let userId = localStorage.getItem('user_id');
-    if (userId) {
+    let user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
       window.location.replace('/account.html');
     }
 };

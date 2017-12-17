@@ -40,13 +40,13 @@
 
     <script id="favorite-template" type="text/x-handlebars-template">
             <li class="row">
-                <div class="rowName" contenteditable></div>
+                <div class="rowName" data-styleId="{{styles_id}}" contenteditable>{{favorites_name}}</div>
                 <div class="rowFont">{{font}}</div>
                 <div class="rowFontColor">{{font_color}}</div>
                 <div class="rowImage">{{background_image}}</div>
                 <div class="rowColorO">{{color_overlay}}</div>
                 <div class="rowGradientO">{{gradient_overlay}}</div>
-                <div class="rowCC"><img id="ccAccount" class="accountCC" src="img/copy.svg"></div>
+                <div class="rowCC"><img class="accountCC" src="img/copy.svg"></div>
             </li> 
     </script>
     <script type="text/javascript" src="js/account.js"></script>
