@@ -29,7 +29,7 @@ modal.displayCC = function () {
   const fontColor = $('.fontStyleOutput').css('color');
   message += `Font Color:<br> ${fontColor}<br><br>`;
 
-  //This is wrong. It's displaying a color, not the img- needs to be a link
+  //background image//
   const backgroundImage = $('.randomImg').attr('src');
   message += `Background Image:<br> ${backgroundImage}<br><br>`;
 
@@ -46,6 +46,7 @@ modal.displayCC = function () {
   $('#googleFontCC').show().html(message);
 };
 
+//copy code functionality//
 function copyToClipboard() {
   var $temp = $("<input>");
   console.log("Hi there");
@@ -54,12 +55,6 @@ function copyToClipboard() {
   document.execCommand("copy");
   $temp.remove();
 }
-
-
-
-//BEGIN experiment for transitional modal
-
-// END experiment for modal window transition effects
 
 $(document).ready(function(){
   modal.copyCodeModal();
