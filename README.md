@@ -19,7 +19,7 @@ the other options until you are satisfied. Love what you have? Press the "Copy C
 
 ### Installation
 1. Log into your Postgres database and start it
-2. On Postgres, create new database called 'landinguser', or whatever you want to call it.
+2. On Postgres, create new database called 'landinguser', or whatever you want to call it (make sure to change it on server.js if you want to use your own database or own name)
 3. Change your conString login using your own login on line 10
 4. Request token.js, put in correct path and put in .gitignore
 5. Start node server
