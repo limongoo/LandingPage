@@ -1,7 +1,7 @@
 'use strict';
 var newUser = {};
-var userID = localStorage.getItem('user_id');
-var retrieveUser = localStorage.getItem('userName');
+var user = JSON.parse(localStorage.getItem('user'));
+// var retrieveUser = localStorage.getItem('userName');
 
 
 // Compile Handlebars
@@ -12,25 +12,27 @@ var retrieveUser = localStorage.getItem('userName');
 // };
 
 // Append data to list
-$.get(`/account/${userID}`)
+$.get(`/account/${user.user_id}`)
 .then(function(response){
     console.log(response);
     var favFiller = Handlebars.compile($('#favorite-template').html()); // Compile templates
-    response.rows.forEach(function(row) {
+    response.rows.forEach(function(row, index) {
         console.log(row);
+        if (row.favorites_name === null || row.favorites_name === '') {
+            row.favorites_name = `Favorite ${index+1}`
+        }
         $('#favoritesOutput').append(favFiller(row));  
         
     })
-    let counter = 0;
-    counter++;
-    $('.rowName').html('Favorite '+counter);  
-    $('#ccAccount').on('click', copyCC);  
+    // counter++;
+    // $('.rowName').html('Favorite '+counter);  
+    $('.accountCC').on('click', copyCC);  
 });
 
 // Hi username
 function getUserName() {
-    console.log(retrieveUser);
-    $('.title').text('Hi '+retrieveUser+'.');
+    console.log(user.username);
+    $('.title').text('Hi '+user.username+'.');
 }
 
 // Copy function
@@ -52,7 +54,17 @@ newUser.logOut = function() {
     });
   };
 
+// Event listener for favorites
+function editFav() {
+    $('.rowName [contenteditable=true]').blur(function() {
+        // var newText = $(this).val();
+        console.log('text');
+    });
+};
+
+
 $(document).ready(function(){
     newUser.logOut();
-    getUserName()
+    getUserName();
+    editFav();
 });

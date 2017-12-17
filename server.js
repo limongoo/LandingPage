@@ -31,14 +31,14 @@ app.post('/signup', function(request, response) {
     `INSERT INTO users (first_name, last_name, username, password)
     VALUES ($1, $2, $3, $4) 
     ON CONFLICT DO NOTHING
-    RETURNING user_id;`,
+    RETURNING user_id, username;`,
     [request.body.first_name,
     request.body.last_name,
     request.body.username,
     request.body.password]
   )
-  .then(function() {
-    response.send('Insert Complete')
+  .then(function(data) {
+    response.send(data.rows[0]);
   })
   .catch(function(err) {
     console.log(request.body);
@@ -49,16 +49,16 @@ app.post('/signup', function(request, response) {
 // Check password in record
 app.post('/login', function(request, response) {
   client.query(
-    `SELECT user_id FROM users 
+    `SELECT user_id, username FROM users 
     WHERE username = $1 AND password = $2`,
     [request.body.username,
     request.body.password]
   )
   .then(function(data) {
-    response.send(data)
+    response.send(data.rows[0]);
   })
   .catch(function(err) {
-    console.error(err)
+    console.error(err);
   });
 });
 
@@ -73,6 +73,22 @@ app.post('/account', function(request, response) {
     request.body.background_image,
     request.body.color_overlay,
     request.body.gradient_overlay]
+  )
+  .then(function() {
+    response.send('Insert Complete')
+  })
+  .catch(function(err) {
+    console.error(err)
+  });
+});
+
+app.put('/account', function(request, response) {
+  client.query(
+    `UPDATE styles 
+    SET favorites_name = $1
+    WHERE styles_id = $2;`,
+    [request.body.favorites_name,
+    request.body.styles_id]
   )
   .then(function() {
     response.send('Insert Complete')
@@ -98,6 +114,7 @@ app.get('/account/:userId', function(request, response) {
 });
 
 
+
 // CREATE TABLES
 function loadDB() {
   client.query(`
@@ -119,7 +136,8 @@ function loadDB() {
       font_color VARCHAR(255),
       background_image VARCHAR(255),
       color_overlay VARCHAR(255),
-      gradient_overlay VARCHAR(255)
+      gradient_overlay VARCHAR(255),
+      favorites_name VARCHAR(255)
     );`
   );
 }
