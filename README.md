@@ -8,7 +8,7 @@
 
 ### Live Project:
 
-###Repository: 
+### Repository: 
 https://github.com/limongoo/LandingPage
 
 ### Project Description
@@ -18,5 +18,5 @@ Quick tutorial: on the left hand side of the page you have two options (a lock o
 the other options until you are satisfied. Love what you have? Press the "Copy Code" button and bring the creation to your own site! Enjoy!
 
 ### Credits
-Unsplash API: https://unsplash.com/developers
-Google Fonts: https://fonts.google.com/
+- Unsplash API: https://unsplash.com/developers
+- Google Fonts: https://fonts.google.com/
