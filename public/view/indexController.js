@@ -18,7 +18,7 @@ $('#randomColor').click(function(){
 
 //Random RBGA Function for Color/Gradient Overlay usage
 function random_rgba() {
-  var o = Math.round, r = Math.random, s = 255;
+  let o = Math.round, r = Math.random, s = 255;
   return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
@@ -47,7 +47,7 @@ $('.lock').on('click', function(event){
   $(iconName).toggleClass('hide');
 });
 
-//Master Random Generator
+//Master Random Generator (if locked, function will not trigger)
 $('#randomizer').click(function(){
   $('img[data-content="refresh"]').not('.hide').trigger('click');
   modal.displayCC();
