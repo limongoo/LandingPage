@@ -1,6 +1,7 @@
 // Unsplash API call
 // Credit: https://source.unsplash.com/  |  https://unsplash.com/
 
+// Random background on click
 $('#randomBackground').on('click', function() {
     console.log('test')
         $.ajax({
@@ -12,6 +13,7 @@ $('#randomBackground').on('click', function() {
         });
 });
 
+// Random background on load
 function getRandom() {
     $.ajax({
         method: 'GET',

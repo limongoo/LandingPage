@@ -1,7 +1,6 @@
 'use strict';
 var newUser = {};
 var user = JSON.parse(localStorage.getItem('user'));
-// var retrieveUser = localStorage.getItem('userName');
 
 // Append data to list
 $.get(`/account/${user.user_id}`)
@@ -14,10 +13,7 @@ $.get(`/account/${user.user_id}`)
             row.favorites_name = `Favorite ${index+1}`
         }
         $('#favoritesOutput').append(favFiller(row));  
-        
     })
-    // counter++;
-    // $('.rowName').html('Favorite '+counter);  
     $('.accountCC').on('click', copyCC);  
 });
 

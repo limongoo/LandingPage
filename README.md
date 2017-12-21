@@ -23,7 +23,7 @@ npm install
 ```
 2. Log into your Postgres database and start it
 2. On Postgres, create new database called 'landinguser', or whatever you want to call it (make sure to change it on server.js if you want to use your own database or own name)
-3. Change your conString login using your own login on line 10 on server.js
+3. Change your conString login using your own user login on line 10 on server.js
 4. Request token from Unsplash API, token in a file called token.js and put in 'js' folder and put in .gitignore also
 5. Start node server
 ```
