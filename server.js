@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 
+// const token = process.env.TOKEN || myApiToken;
 // const conString = process.env.DATABASE_URL;
 // const conString = 'postgres://ivanlimongan@localhost:5432/landinguser';
 const conString = 'postgres://enduser@localhost:5432/landinguser';
