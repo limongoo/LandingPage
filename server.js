@@ -6,8 +6,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 
+// const token = process.env.TOKEN || myApiToken;
 // const conString = process.env.DATABASE_URL;
-const conString = 'postgres://ivanlimongan@localhost:5432/landinguser';
+// const conString = 'postgres://ivanlimongan@localhost:5432/landinguser';
+const conString = 'postgres://enduser@localhost:5432/landinguser';
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -82,6 +84,7 @@ app.post('/account', function(request, response) {
   });
 });
 
+// Update Favorites Name
 app.put('/account', function(request, response) {
   client.query(
     `UPDATE styles 
@@ -113,9 +116,7 @@ app.get('/account/:userId', function(request, response) {
   });
 });
 
-
-
-// CREATE TABLES
+// CREATE TABLES 
 function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS

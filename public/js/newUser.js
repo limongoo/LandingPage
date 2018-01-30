@@ -43,25 +43,12 @@ $('#newUserForm').submit(function(event){
   $.post('/signup', captureUser)
   .done(function(response){
     console.log(response);
-    
-    // if(response === 'Insert Complete') {
-      // window.location.replace('/account.html');
-      // let userId = localStorage.getItem('user');
-      // console.log(userId);
       if (response.user_id) {
         localStorage.setItem('user', JSON.stringify(response));
         window.location.replace('/account.html');
       }
-    
   })
 });
-// Logged In redirect to account
-// newUser.redirect = function() {
-//   let userId = localStorage.getItem('user_id');
-//   if (userId) {
-//     window.location.replace('/account.html');
-//   }
-// };
 
 // Login Submit
 $('#existingUser').submit(function(event){
@@ -101,10 +88,6 @@ newUser.redirect = function() {
       window.location.replace('/account.html');
     }
 };
-
-
-
-
 
 $(document).ready(function(){
   newUser.newUserContainer();
