@@ -1,7 +1,7 @@
 // Unsplash API call
 // Credit: https://source.unsplash.com/  |  https://unsplash.com/
 
-require('dotenv').config;
+// require('dotenv').config;
 
 let token = process.env.TOKEN;
 
