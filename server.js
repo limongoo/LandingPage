@@ -6,9 +6,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT;
+const fetch = require('node-fetch');
 
 
 const conString = process.env.DATABASE_URL;
+const unsplashClientId = process.env.UNSPLASH_CLIENT_ID;
 // const conString = 'postgres://ivanlimongan@localhost:5432/landinguser';
 // const conString = 'postgres://enduser@localhost:5432/landinguser';
 const client = new pg.Client(conString);
@@ -115,6 +117,17 @@ app.get('/account/:userId', function(request, response) {
   .catch(function(err) {
     console.error(err)
   });
+});
+
+// Routes to unsplash api
+app.get('/photos/random', (req, res) => {
+  fetch('https://api.unsplash.com/photos/random', {
+    headers: {
+      'Authorization': `Client-ID ${unsplashClientId}`,
+    },
+  })
+    .then((response) => response.json())
+    .then((results) => res.json(results))
 });
 
 // CREATE TABLES 
